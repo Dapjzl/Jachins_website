@@ -592,6 +592,7 @@ img {
   text-align: center;
 }
 
+
 @media (max-width: 991px) {
   .page-title {
     height: 300px;
@@ -5191,7 +5192,7 @@ img {
 
 .contact-pg-section .office-info:before {
   content: "";
-  background-color: rgba(255, 94, 20, 0.95);
+  background-color: #790b18;;
   width: 100%;
   height: 100%;
   position: absolute;
@@ -6961,4 +6962,460 @@ img {
   max-width: 90%;
   max-height: 90%;
   border-radius: 10px;
+}
+
+
+/* Page Title For Services */
+.page-title-service {
+  background: url("../images/service.jpg") center center/cover no-repeat local;
+  width: 100%;
+  height: 430px;
+  position: relative;
+  text-align: center;
+}
+
+
+@media (max-width: 991px) {
+  .page-title-service {
+    height: 300px;
+  }
+}
+
+.page-title-service:before {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.page-title-service .container {
+  height: 100%;
+  display: table;
+}
+
+@media screen and (min-width: 992px) {
+  .page-title-service .container {
+    padding-top: 100px;
+  }
+}
+
+.page-title-service .container > .row {
+  vertical-align: middle;
+  display: table-cell;
+}
+
+.page-title-service h2 {
+  font-size: 50px;
+  font-size: 3.33333rem;
+  color: #fff;
+  margin: 0 0 0.30em;
+  text-transform: capitalize;
+}
+
+@media (max-width: 991px) {
+  .page-title-service h2 {
+    font-size: 45px;
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .page-title-service h2 {
+    font-size: 40px;
+    font-size: 2.66667rem;
+  }
+}
+
+.page-title-service .breadcrumb {
+  background-color: transparent;
+  padding: 0;
+  margin-bottom: 0;
+}
+
+@media (max-width: 767px) {
+  .page-title-service .breadcrumb {
+    text-align: center;
+  }
+}
+
+.page-title-service .breadcrumb li {
+  font-size: 16px;
+  font-size: 1.06667rem;
+  color: #fff;
+  margin-right: 5px;
+  position: relative;
+}
+
+@media (max-width: 767px) {
+  .page-title-service .breadcrumb li {
+    font-size: 14px;
+    font-size: 0.93333rem;
+  }
+}
+
+.page-title-service .breadcrumb li a {
+  color: #790b18;
+}
+
+.page-title-service .breadcrumb li a:hover {
+  color: #fa4f00;
+}
+
+.page-title-service .breadcrumb > li + li {
+  margin-left: 20px;
+  padding-left: 15px;
+}
+
+.page-title-service .breadcrumb > li + li:before {
+  font-family: Flaticon;
+  content: "\f103";
+  padding: 0;
+  position: absolute;
+  left: -14px;
+  top: 1px;
+  color: #790b18;
+}
+
+ /* Page Title For contact */
+.page-title-contact {
+  background: url("../images/service.jpg") center center/cover no-repeat local;
+  width: 100%;
+  height: 430px;
+  position: relative;
+  text-align: center;
+}
+
+
+@media (max-width: 991px) {
+  .page-title-contact {
+    height: 300px;
+  }
+}
+
+.page-title-contact:before {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.page-title-contact .container {
+  height: 100%;
+  display: table;
+}
+
+@media screen and (min-width: 992px) {
+  .page-title-contact .container {
+    padding-top: 100px;
+  }
+}
+
+.page-title-contact .container > .row {
+  vertical-align: middle;
+  display: table-cell;
+}
+
+.page-title-contact h2 {
+  font-size: 50px;
+  font-size: 3.33333rem;
+  color: #fff;
+  margin: 0 0 0.30em;
+  text-transform: capitalize;
+}
+
+@media (max-width: 991px) {
+  .page-title-contact h2 {
+    font-size: 45px;
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .page-title-contact h2 {
+    font-size: 40px;
+    font-size: 2.66667rem;
+  }
+}
+
+.page-title-contact .breadcrumb {
+  background-color: transparent;
+  padding: 0;
+  margin-bottom: 0;
+}
+
+@media (max-width: 767px) {
+  .page-title-contact .breadcrumb {
+    text-align: center;
+  }
+}
+
+.page-title-contact .breadcrumb li {
+  font-size: 16px;
+  font-size: 1.06667rem;
+  color: #fff;
+  margin-right: 5px;
+  position: relative;
+}
+
+@media (max-width: 767px) {
+  .page-title-contact .breadcrumb li {
+    font-size: 14px;
+    font-size: 0.93333rem;
+  }
+}
+
+.page-title-contact .breadcrumb li a {
+  color: #790b18;
+}
+
+.page-title-contact .breadcrumb li a:hover {
+  color: #fa4f00;
+}
+
+.page-title-contact .breadcrumb > li + li {
+  margin-left: 20px;
+  padding-left: 15px;
+}
+
+.page-title-contact .breadcrumb > li + li:before {
+  font-family: Flaticon;
+  content: "\f103";
+  padding: 0;
+  position: absolute;
+  left: -14px;
+  top: 1px;
+  color: #790b18;
+}
+ /* Page Title For Contact */
+ .page-title-career {
+  background: url("../images/cta-s2-bg.jpg") center center/cover no-repeat local;
+  width: 100%;
+  height: 430px;
+  position: relative;
+  text-align: center;
+}
+
+
+@media (max-width: 991px) {
+  .page-title-career {
+    height: 300px;
+  }
+}
+
+.page-title-career:before {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.page-title-career .container {
+  height: 100%;
+  display: table;
+}
+
+@media screen and (min-width: 992px) {
+  .page-title-career .container {
+    padding-top: 100px;
+  }
+}
+
+.page-title-career .container > .row {
+  vertical-align: middle;
+  display: table-cell;
+}
+
+.page-title-career h2 {
+  font-size: 50px;
+  font-size: 3.33333rem;
+  color: #fff;
+  margin: 0 0 0.30em;
+  text-transform: capitalize;
+}
+
+@media (max-width: 991px) {
+  .page-title-career h2 {
+    font-size: 45px;
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .page-title-career h2 {
+    font-size: 40px;
+    font-size: 2.66667rem;
+  }
+}
+
+.page-title-career .breadcrumb {
+  background-color: transparent;
+  padding: 0;
+  margin-bottom: 0;
+}
+
+@media (max-width: 767px) {
+  .page-title-career .breadcrumb {
+    text-align: center;
+  }
+}
+
+.page-title-career .breadcrumb li {
+  font-size: 16px;
+  font-size: 1.06667rem;
+  color: #fff;
+  margin-right: 5px;
+  position: relative;
+}
+
+@media (max-width: 767px) {
+  .page-title-career .breadcrumb li {
+    font-size: 14px;
+    font-size: 0.93333rem;
+  }
+}
+
+.page-title-career .breadcrumb li a {
+  color: #790b18;
+}
+
+.page-title-career .breadcrumb li a:hover {
+  color: #fa4f00;
+}
+
+.page-title-career .breadcrumb > li + li {
+  margin-left: 20px;
+  padding-left: 15px;
+}
+
+.page-title-career .breadcrumb > li + li:before {
+  font-family: Flaticon;
+  content: "\f103";
+  padding: 0;
+  position: absolute;
+  left: -14px;
+  top: 1px;
+  color: #790b18;
+}
+
+/* Page Title For Career */
+.page-title-contact {
+  background: url("../images/cta-bg.jpg") center center/cover no-repeat local;
+  width: 100%;
+  height: 430px;
+  position: relative;
+  text-align: center;
+}
+
+
+@media (max-width: 991px) {
+  .page-title-contact {
+    height: 300px;
+  }
+}
+
+.page-title-contact:before {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.page-title-contact .container {
+  height: 100%;
+  display: table;
+}
+
+@media screen and (min-width: 992px) {
+  .page-title-contact .container {
+    padding-top: 100px;
+  }
+}
+
+.page-title-contact .container > .row {
+  vertical-align: middle;
+  display: table-cell;
+}
+
+.page-title-contact h2 {
+  font-size: 50px;
+  font-size: 3.33333rem;
+  color: #fff;
+  margin: 0 0 0.30em;
+  text-transform: capitalize;
+}
+
+@media (max-width: 991px) {
+  .page-title-contact h2 {
+    font-size: 45px;
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .page-title-contact h2 {
+    font-size: 40px;
+    font-size: 2.66667rem;
+  }
+}
+
+.page-title-contact .breadcrumb {
+  background-color: transparent;
+  padding: 0;
+  margin-bottom: 0;
+}
+
+@media (max-width: 767px) {
+  .page-title-contact .breadcrumb {
+    text-align: center;
+  }
+}
+
+.page-title-contact .breadcrumb li {
+  font-size: 16px;
+  font-size: 1.06667rem;
+  color: #fff;
+  margin-right: 5px;
+  position: relative;
+}
+
+@media (max-width: 767px) {
+  .page-title-contact .breadcrumb li {
+    font-size: 14px;
+    font-size: 0.93333rem;
+  }
+}
+
+.page-title-contact .breadcrumb li a {
+  color: #790b18;
+}
+
+.page-title-contact .breadcrumb li a:hover {
+  color: #fa4f00;
+}
+
+.page-title-contact .breadcrumb > li + li {
+  margin-left: 20px;
+  padding-left: 15px;
+}
+
+.page-title-contact .breadcrumb > li + li:before {
+  font-family: Flaticon;
+  content: "\f103";
+  padding: 0;
+  position: absolute;
+  left: -14px;
+  top: 1px;
+  color: #790b18;
 }
