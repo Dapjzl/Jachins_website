@@ -1809,6 +1809,31 @@ img {
     right: 0 !important;
   }
 }
+/* Company Logo */
+.company-logo{
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 10px;
+  width: 100px;
+}
+
+@media (max-width: 768px) {
+  .company-logo {
+    width: 100px; /* Smaller logo */
+    top: -35px;
+    left: 5px;
+  }
+}
+
+/* For Mobile (width < 480px) */
+@media (max-width: 480px) {
+  .company-logo {
+    width: 80px; /* Even smaller logo */
+    top: -25px;
+    left: 2px;
+  }
+}
 
 @media (max-width: 767px) {
   .site-header .navbar-header .navbar-brand {
