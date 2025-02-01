@@ -2097,7 +2097,7 @@ img {
 
 @media (max-width: 991px) {
   .header-style-1 .navigation, .header-style-2 .navigation {
-    background: #313131;
+    /* background: #313131; */
     padding: 15px;
   }
   .header-style-1 .navbar-header button, .header-style-2 .navbar-header button {
