@@ -1829,7 +1829,7 @@ img {
 /* For Mobile (width < 480px) */
 @media (max-width: 480px) {
   .company-logo {
-    width: 80px; /* Even smaller logo */
+    width: 130px; /* Even smaller logo */
     top: -25px;
     left: 2px;
   }
