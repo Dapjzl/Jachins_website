@@ -1814,7 +1814,7 @@ img {
   position: absolute;
   top: 0;
   left: 0;
-  margin: 10px;
+  /* margin: 10px; */
   width: 130px;
 }
 
@@ -1829,7 +1829,7 @@ img {
 /* For Mobile (width < 480px) */
 @media (max-width: 480px) {
   .company-logo {
-    width: 130px; /* Even smaller logo */
+    width: 120px; /* Even smaller logo */
     top: -25px;
     left: 2px;
   }
