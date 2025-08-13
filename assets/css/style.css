@@ -2315,7 +2315,7 @@ img {
 
 .hero-slider .swiper-slide {
   overflow: hidden;
-  color: #fff;
+  color: whitesmoke;
 }
 
 .hero-slider .swiper-container {
@@ -2372,7 +2372,7 @@ img {
 
 .hero-slider .swiper-button-prev:hover,
 .hero-slider .swiper-button-next:hover {
-  background: white;
+  background: whitesmoke;
 }
 
 .hero-slider .swiper-button-prev:hover:before,
