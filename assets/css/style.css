@@ -125,6 +125,14 @@ h6 {
   font-weight: bold;
 }
 
+/* SEO heading style */
+.site-main-heading {
+  color: #111111;
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0 0 20px;
+}
+
 ul {
   padding-left: 0;
   margin: 0;
@@ -407,7 +415,7 @@ img {
 }
 
 .section-title-s2 h2:before, .section-title-s3 h2:before, .section-title-s4 h2:before {
-  left: calc(50% - 30px);
+  left: calc(50% - 220px);
 }
 
 .section-title-s2 h2:after, .section-title-s3 h2:after, .section-title-s4 h2:after {
@@ -717,6 +725,17 @@ img {
   background-size: contain;
   animation: preloader-bounce 1.2s infinite ease-in-out;
 }
+
+.lds-ellipsis {
+  width: 120px;
+  height: 120px;
+  display: inline-block;
+  position: relative;
+  background: url('../images/jachins_logo.png') no-repeat center center;
+  background-size: contain;
+  animation: preloader-bounce 1.2s infinite ease-in-out;
+}
+.lds-ellipsis div { display: none; }
 
 @keyframes preloader-bounce {
   0%, 100% {
@@ -1122,7 +1141,7 @@ img {
 .blog-sidebar .recent-post-widget .post .details .date {
   font-size: 13px;
   font-size: 0.86667rem;
-  color: #687187;
+  color: #000;
 }
 
 .blog-sidebar .recent-post-widget .post .details .date i {
@@ -2593,7 +2612,7 @@ img {
 #0.5	footer
 --------------------------------------------------------------*/
 .site-footer {
-  background-color: #ff0000;
+  background-color: #111111; /* slightly lighter black */
   position: relative;
   font-size: 15px;
   overflow: hidden;
@@ -2673,7 +2692,7 @@ img {
 
 .site-footer .widget-title h3:before {
   content: "";
-  background:  #ff0000;;
+  background: #ff0000; /* company accent */
   width: 60px;
   height: 4px;
   border-radius: 5px;
@@ -2684,7 +2703,7 @@ img {
 
 .site-footer .widget-title h3:after {
   content: "";
-  background:  #ff0000;;
+  background: #ff0000; /* company accent */
   width: 15px;
   height: 4px;
   border-radius: 5px;
@@ -2734,8 +2753,8 @@ img {
 }
 
 .site-footer .about-widget .social ul li a:hover {
-  background-color:  #ff0000;;
-  border-color:  #ff0000;;
+  background-color: #ff0000;
+  border-color: #ff0000;
 }
 
 .site-footer .link-widget {
@@ -2777,6 +2796,32 @@ img {
   position: relative;
 }
 
+.site-footer,
+.site-footer * {
+  color: #ffffff !important;
+}
+
+.site-footer a,
+.site-footer a:visited {
+  color: #ffffff !important;
+  text-decoration: none;
+}
+
+.site-footer a:hover,
+.site-footer a:focus {
+  color: #ff0000 !important; /* use company red as accent on hover */
+}
+
+.site-footer input,
+.site-footer textarea,
+.site-footer button {
+  color: #ffffff !important;
+}
+
+.site-footer ::placeholder {
+  color: rgba(255,255,255,0.8) !important;
+}
+
 .site-footer .link-widget ul li:before {
   content: "";
   background: #c2c4c8;
@@ -2795,7 +2840,7 @@ img {
 
 .site-footer .link-widget ul a:hover,
 .site-footer .link-widget ul li:hover:before {
-  color:  #ff0000;;
+  color: #ff0000;
 }
 
 .site-footer .link-widget ul > li + li {
@@ -2826,12 +2871,12 @@ img {
 }
 
 .site-footer .newsletter-widget form input {
-  background-color: #292e3b;
+  background-color: #121212;
   height: 50px;
-  color: #687187;
+  color: #ffffff;
   padding: 6px 20px;
   border-radius: 3px;
-  border: none;
+  border: 1px solid rgba(255,255,255,0.08);
   -webkit-box-shadow: none;
   box-shadow: none;
 }
@@ -2932,6 +2977,66 @@ img {
   position: relative;
 }
 
+/* Accessibility additions */
+/* skip-to-content removed */
+
+/* Strong visible focus outlines for keyboard users */
+a:focus, button:focus, input:focus, textarea:focus, .preloader-image:focus, img[role="button"]:focus {
+  outline: 3px solid #ffd100;
+  outline-offset: 2px;
+}
+
+/* Improve contrast for image captions/alt text (if any overlays used) */
+.img-holder .caption, .service-single .caption {
+  color: #ffffff;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.6);
+}
+
+/* Back-to-top and floating contact button */
+.back-to-top {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: none;
+  background: #ff0000;
+  color: #fff;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  opacity: 0;
+  visibility: hidden;
+  transition: all .25s ease;
+  z-index: 9999;
+}
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.floating-contact { display: none !important; }
+
+/* Back-to-top text shown on hover */
+.back-to-top { position: fixed; }
+.back-to-top .back-to-top-text {
+  display: none;
+  position: absolute;
+  right: 56px;
+  background: rgba(17,17,17,0.9);
+  color: #fff;
+  padding: 8px 10px;
+  border-radius: 4px;
+  font-size: 13px;
+  white-space: nowrap;
+}
+.back-to-top:hover .back-to-top-text { display: block; }
+.back-to-top:active { background: transparent !important; color: inherit; }
+
 @media (max-width: 767px) {
   .site-footer .lower-footer .short-links ul > li + li {
     margin-left: 15px;
@@ -2981,10 +3086,31 @@ img {
 }
 
 .site-header .sticky-on {
-  background: #ff0000;
+  background: #fff;
+  text-decoration-color: #000;
   opacity: 1;
   top: 0;
   visibility: visible;
+}
+
+.site-header .sticky-on a {
+  color: #000;
+}
+
+/* When header is NOT sticky (scrolling back up), make popup/menu text white for contrast */
+.site-header:not(.sticky-on) #navbar > ul .sub-menu,
+.site-header:not(.sticky-on) #navbar .mega-menu,
+.site-header:not(.sticky-on) #navbar .half-mega-menu {
+  background: rgba(17,17,17,0.92);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+.site-header:not(.sticky-on) #navbar > ul > li .sub-menu a,
+.site-header:not(.sticky-on) #navbar .mega-menu .mega-menu-list-holder a,
+.site-header:not(.sticky-on) #navbar .mega-menu .mega-menu-box-title {
+  color: #fff !important;
+}
+.site-header:not(.sticky-on) #navbar > ul > .menu-item-has-children > a:before {
+  color: #fff;
 }
 
 .header-style-2 .sticky-on {
