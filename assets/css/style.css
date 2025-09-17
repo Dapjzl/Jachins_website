@@ -86,6 +86,68 @@ Version:        1.0.0
 	Fonts
 ----------------------------*/
 @import url("https://fonts.googleapis.com/css?family=Barlow+Condensed:400,500,700|Open+Sans:400,400i,600&amp;display=swap");
+/* ----------------------------
+   Project design tokens
+   Minimal, additive base rules to unify fonts, colors, spacing
+-----------------------------*/
+:root{
+  /* Typography */
+  --font-sans: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  --font-head: "Barlow Condensed", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  --base-font-size: 15px; /* keeps existing scale */
+
+  /* Color palette */
+  --brand: #ff0000; /* primary accent */
+  --bg: #ffffff;
+  --text-muted: #687187;
+  --text: #151222;
+  --panel-bg: #f7f9fb;
+
+  /* Spacing scale */
+  --space-xs: 6px;
+  --space-sm: 12px;
+  --space-md: 20px;
+  --space-lg: 40px;
+  --space-xl: 80px;
+
+  /* Border radius */
+  --radius-pill: 60px;
+}
+
+/* Apply tokens to a few core elements (non-destructive) */
+html { font-size: var(--base-font-size); }
+body {
+  font-family: var(--font-sans);
+  color: var(--text-muted);
+  background-color: var(--bg);
+}
+
+/* Headings */
+h1,h2,h3,h4,h5,h6{ font-family: var(--font-head); color: var(--text); }
+
+/* Links / accents */
+a, .theme-btn, .theme-btn-s2 { color: var(--brand); }
+
+/* Buttons - keep current classes but use tokens */
+.theme-btn, .theme-btn-s2, .submit-btn {
+  border-radius: var(--radius-pill);
+}
+
+/* Spacing helpers - small safe utilities */
+.m-b-sm{ margin-bottom: var(--space-sm) !important; }
+.m-b-md{ margin-bottom: var(--space-md) !important; }
+.p-sm{ padding: var(--space-sm) !important; }
+.p-md{ padding: var(--space-md) !important; }
+
+/* Make images consistent */
+img{ max-width:100%; height:auto; display:block; }
+
+/* Footer/contrast safeguard - minimal, additive override */
+footer, .site-footer { background-color: #111111; color: #fff; }
+footer a, .site-footer a{ color: var(--brand); }
+
+/* end design tokens */
+
 /*--------------------------------------------------------------
 #0.1    Theme Reset Style
 --------------------------------------------------------------*/
