@@ -172,7 +172,7 @@ body {
 }
 
 p {
-  color: #687187;
+  color: #000;
   line-height: 1.7em;
 }
 
@@ -1616,6 +1616,23 @@ img {
     color: #151222;
     font-size: 16px;
     font-size: 1.06667rem;
+  }
+  /* Ensure dropdown / submenu links use the brand color on hover/focus.
+     Use high specificity and !important to override third-party/bootstrap rules
+     and account for sticky/non-sticky header color contexts. */
+  .site-header #navbar .sub-menu > li > a:hover,
+  .site-header #navbar .sub-menu > li > a:focus,
+  .site-header #navbar .mega-menu .mega-menu-list-holder li a:hover,
+  .site-header #navbar .mega-menu .mega-menu-list-holder li a:focus {
+    color: var(--brand) !important;
+    background-color: transparent !important;
+  }
+
+  /* For inverted/dark submenu (when header is not sticky) keep hover visible */
+  .site-header:not(.sticky-on) #navbar .sub-menu > li > a:hover,
+  .site-header:not(.sticky-on) #navbar .sub-menu > li > a:focus {
+    color: var(--brand) !important;
+    background-color: rgba(255,255,255,0.04) !important;
   }
   .site-header #navbar > ul > li > .sub-menu .sub-menu {
     left: 112%;
@@ -4743,6 +4760,7 @@ a:focus, button:focus, input:focus, textarea:focus, .preloader-image:focus, img[
 .services-section-s2 .service-grids p, .services-section-s3 .service-grids p {
   margin: 0;
 }
+
 
 /*--------------------------------------------------------------
 #2.4	cta-section-s2
