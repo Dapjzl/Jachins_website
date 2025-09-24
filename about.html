@@ -30,6 +30,29 @@
     <link href="assets/css/odometer-theme-default.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
 
+    <style>
+    /* Local override: center the WHO WE ARE block and add soft background */
+    .whoweare-section.centered {
+        background: #f7f8fa; /* very light gray */
+        padding: 60px 0; 
+    }
+    .whoweare-section.centered .section-title,
+    .whoweare-section.centered .details,
+    .whoweare-section.centered .ceo-quote {
+        text-align: center;
+    }
+    .whoweare-section.centered .ceo-quote blockquote {
+        display: inline-block;
+        max-width: 760px;
+        margin: 20px auto 0;
+        text-align: left; /* keep quote text left-aligned for readability */
+        background: #fff;
+        padding: 18px 22px;
+        border-radius: 6px;
+        box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    }
+    </style>
+
 </head>
 
 <body>
@@ -68,7 +91,6 @@
                                     <li><a href="https://x.com/jachinsgroup?t=5FbJUbQt13bUsUOoctOzFg&s=08" target="_blank"><i class="fa-brands fa-x-twitter"></i></a></li>
                                     <li><a href="https://www.linkedin.com/company/jachins-development-ltd" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
                                     <li><a href="https://www.instagram.com/jachinsgroup/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
-                                    
                                 </ul>
                             </div>
                         </div>
@@ -135,39 +157,21 @@
         <!-- end page-title -->
 
          <!-- start about-us-section -->
-        <section class="about-us-section section-padding p-b-0">
+        <section class="whoweare-section section-padding p-b-0 centered">
             <div class="container">
                 <div class="row">
-                    <div class="col col-md-7">
+                    <div class="col col-md-8 col-md-offset-2">
                         <div class="section-title">
-                            <span>About us</span>
-                            <h2>... And Across Asset Lifecycle <span></span></h2>
+                            <h2>WHO WE ARE <span></span></h2>
                         </div>
                         <div class="details">
-                            <p><B>JACHINS'</B> expertise spans Field Development Strategy to Decommissioning & Abandonment </p>
-                            <ul>
-
-                                <li><i class="ti-arrow-circle-right"></i> Field Development Strategy </li>
-                                <li><i class="ti-arrow-circle-right"></i> Feasibility & Concept Selection </li>
-                                <li><i class="ti-arrow-circle-right"></i> Engineering Design </li>
-                                <li><i class="ti-arrow-circle-right"></i> Procurement, Construction & Installation </li>
-                                <li><i class="ti-arrow-circle-right"></i> Operation & Asset management </li>
-                                <li><i class="ti-arrow-circle-right"></i> Life Extension </li>
-                                <li><i class="ti-arrow-circle-right"></i> Decommissioning </li>
-                                <li><i class="ti-arrow-circle-right"></i> Abandonment </li>
-
-                            </ul>
+                            <p><B>TALK ABOUT JACHINS</B> </p>
                         </div>
-                        <!-- <div class="ceo-quote">
+                        <div class="ceo-quote">
                             <blockquote>
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas explicabo nemo ab iste laboriosam deserunt ipsa eius dolores veritatis.
-                                <span>- Adam ( CEO of the company )</span>
+                                <span><B>- Mr. Abimbola Adeoye Onaolapo ( CEO of the company )</B></span>
                             </blockquote>
-                        </div> -->
-                    </div>
-                    <div class="col col-md-5">
-                        <div class="img-holder about-image" style="padding-top: 50px;">
-                            <img src="assets/images/about-across.png" style="padding-top: 50px;" alt>
                         </div>
                     </div>
                 </div>
