@@ -262,13 +262,32 @@
                                     <h3>Address Location</h3>
                                 </div>
                                 <ul>
-                                    <li>D1, Winston Terraces, Innocent
-                                        Idibia Street, Richmond Gate
-                                        Estate, Lekki, Lagos State.</li>
-                                    <li>Phone:  +234-803-975-4139</li>
-                                    <li>Office Time: 9AM - 6PM</li>
+                                    <li>D1, Winston Terraces,<br> 
+                                        Innocent Idibia Street,<br>
+                                        Ikate Lekki,<br>
+                                        Lagos State.</li>
+                                    <li>Phone: +234-803-975-4139</li>
+                                    <li>Office Time: 8AM - 5PM</li>
                                     <li>Email: info@jachins.com</li>
                                 </ul>
+                            </div>
+                        </div>
+                    </div>
+                     <!-- Permits Section -->
+                     <div class="row">
+                        <div class="col col-xs-12">
+                            <div class="widget permits-widget">
+                                <div class="widget-title">
+                                    <h3>Licenses & Permits</h3>
+                                </div>
+                                <div class="permits-grid">
+                                    <div class="permit-item">
+                                        <img src="assets/images/permits1.png" alt="JACHINS Permit 1" onclick="openPreview(this.src)" class="permit-image">
+                                    </div>
+                                    <div class="permit-item">
+                                        <img src="assets/images/permits2.png" alt="JACHINS Permit 2" onclick="openPreview(this.src)" class="permit-image">
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -292,6 +311,20 @@
             </div>
         </footer>
         <!-- end site-footer -->
+        <div class="preview-container" id="previewContainer" onclick="closePreview()">
+            <img id="previewImage" src="" alt="Preview">
+        </div>
+
+        <script>
+            function openPreview(src) {
+                document.getElementById('previewImage').src = src;
+                document.getElementById('previewContainer').style.display = 'flex';
+            }
+
+            function closePreview() {
+                document.getElementById('previewContainer').style.display = 'none';
+            }
+        </script>
 
     </div>
     <!-- end of page-wrapper -->

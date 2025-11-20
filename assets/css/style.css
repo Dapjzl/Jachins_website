@@ -1585,7 +1585,7 @@ img {
     font-size: 0.93333rem;
     font-weight: 500;
     text-transform: uppercase;
-    color: #fff;
+    /* color: #fff; */
     padding: 40px 20px;
   }
   .site-header #navbar > ul .sub-menu {

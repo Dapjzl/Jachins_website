@@ -597,45 +597,10 @@
                         <div class="grid">
                             <img src="assets/images/partners/partners.png" alt>
                         </div>
-                        <div class="grid">
+                        <!-- <div class="grid">
                             <img src="assets/images/partners/partners2.png" alt>
-                        </div>
-                        <!-- <div class="partner-grids partners-slider">
-                            <div class="grid">
-                                <img src="assets/images/partners/conoil.png" alt>
-                            </div>
-                            <div class="grid">
-                                <img src="assets/images/partners/nnpc.jpg" alt>
-                            </div>
-                            <div class="grid">
-                                <img src="assets/images/partners/belemaoil.png" alt>
-                            </div>
-                            <div class="grid">
-                                <img src="assets/images/partners/fhn.jpg" alt>
-                            </div>
-                            <div class="grid">
-                                <img src="assets/images/partners/ws.jpg" alt>
-                            </div>
-                            <div class="grid">
-                                <img src="assets/images/partners/newcross2.png" alt>
-                            </div>
-                            <div class="grid">
-                                <img src="assets/images/partners/seplat-logo.jpg" alt>
-                            </div>
-                            <div class="grid">
-                                <img src="assets/images/partners/newcross.png" alt>
-                            </div>
-                            <div class="grid">
-                                <img src="assets/images/partners/TOTAL.png" alt>
-                            </div>
-                            <div class="grid">
-                                <img src="assets/images/partners/BOAZ.png" alt>
-                            </div>
-                            <div class="grid">
-                                <img src="assets/images/partners/exxon.png" alt>
-                            </div>
                         </div> -->
-                    </div>
+                     </div>
                 </div>
                 <div class="separator"></div>
             </div> <!-- end container -->
@@ -742,6 +707,20 @@
             </div>
         </footer>
         <!-- end site-footer -->
+        <div class="preview-container" id="previewContainer" onclick="closePreview()">
+            <img id="previewImage" src="" alt="Preview">
+        </div>
+
+        <script>
+            function openPreview(src) {
+                document.getElementById('previewImage').src = src;
+                document.getElementById('previewContainer').style.display = 'flex';
+            }
+
+            function closePreview() {
+                document.getElementById('previewContainer').style.display = 'none';
+            }
+        </script>
 
     </div>
     <!-- end of page-wrapper -->
