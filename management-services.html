@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="author" content="irstheme">
-    
-        <title> JACHINS Development Limited </title>
-        
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="irstheme">
+
+    <title> JACHINS Development Limited </title>
+
     <script src="https://kit.fontawesome.com/b62aceb299.js" crossorigin="anonymous"></script>
     <link href="assets/css/themify-icons.css" rel="stylesheet">
     <link href="assets/css/flaticon.css" rel="stylesheet">
@@ -24,6 +23,39 @@
     <link href="assets/css/jquery.fancybox.css" rel="stylesheet">
     <link href="assets/css/odometer-theme-default.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
+
+    <style>
+        /* Horizontal grid for benefit sections */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        @media (max-width: 991px) {
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .benefits-grid .benefit {
+            margin-bottom: 0 !important;
+        }
+
+        /* Stack images above text */
+        .benefits-grid .benefit .img-holder {
+            width: 100% !important;
+            float: none !important;
+            margin: 0 0 20px 0 !important;
+        }
+
+        .benefits-grid .benefit .details {
+            width: 100% !important;
+            float: none !important;
+            padding-left: 0 !important;
+        }
+    </style>
 
 </head>
 
@@ -51,7 +83,7 @@
                         <div class="col col-md-9">
                             <div class="contact-info">
                                 <ul>
-                                    <li><i class="ti-mobile"></i> +234-805-480-4131,  +234-803-975-4139</li>
+                                    <li><i class="ti-mobile"></i> +234-805-480-4131, +234-803-975-4139</li>
                                     <li><i class="ti-email"></i> info@jachins.com</li>
                                     <li><i class="ti-time"></i> Mon - Fri 9AM - 6PM</li>
                                 </ul>
@@ -60,10 +92,14 @@
                         <div class="col col-md-3">
                             <div class="social">
                                 <ul>
-                                    <li><a href="https://x.com/jachinsgroup?t=5FbJUbQt13bUsUOoctOzFg&s=08" target="_blank"><i class="fa-brands fa-x-twitter"></i></a></li>
-                                    <li><a href="https://www.linkedin.com/company/jachins-development-ltd" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
-                                    <li><a href="https://www.instagram.com/jachinsgroup/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
-                                    
+                                    <li><a href="https://x.com/jachinsgroup?t=5FbJUbQt13bUsUOoctOzFg&s=08"
+                                            target="_blank" rel="noopener"><i class="fa-brands fa-x-twitter"></i></a>
+                                    </li>
+                                    <li><a href="https://www.linkedin.com/company/jachins-development-ltd"
+                                            target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i></a>
+                                    </li>
+                                    <li><a href="https://www.instagram.com/jachinsgroup/" target="_blank"
+                                            rel="noopener"><i class="fa-brands fa-instagram"></i></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -73,17 +109,19 @@
             <nav class="navigation navbar navbar-default">
                 <div class="container">
                     <div class="navbar-header">
-                        <button type="button" class="open-btn">
+                        <button type="button" class="open-btn" aria-label="Open navigation menu">
                             <span class="sr-only">Toggle navigation</span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="index.html"><img class="company-logo" src="assets/images/jachins_logo.png" alt></a>
+                        <a class="navbar-brand" href="index.html" title="JACHINS Development Limited"><img
+                                class="company-logo" src="assets/images/jachins_logo.png" alt="JACHINS Logo"></a>
 
                     </div>
                     <div id="navbar" class="navbar-collapse collapse navbar-right navigation-holder">
-                        <button class="close-navbar"><i class="ti-close"></i></button>
+                        <button class="close-navbar" aria-label="Close navigation menu"><i
+                                class="ti-close"></i></button>
                         <ul class="nav navbar-nav">
                             <li class="menu-item">
                                 <a href="index.html">Home</a>
@@ -93,7 +131,7 @@
                             </li>
                             <li class="menu-item-has-children">
                                 <a href="#">Services</a>
-                               <ul class="sub-menu">
+                                <ul class="sub-menu">
                                     <li><a href="consultancy-services.html">People</a></li>
                                     <li><a href="project-services.html">Assets</a></li>
                                     <li><a href="management-services.html">Critical Infrastructure</a></li>
@@ -113,19 +151,19 @@
 
 
         <!-- start page-title -->
-        <section class="page-title-service">
+        <section class="page-title-service page-title-operation">
             <div class="container">
                 <div class="row">
                     <div class="col col-xs-12">
-                        <h2>Asset Management</h2>
+                        <h2>Critical Infrastructure</h2>
                         <ol class="breadcrumb">
                             <li><a href="index.html">Home</a></li>
-                            <li>Asset Management</li>
+                            <li>Critical Infrastructure</li>
                         </ol>
                     </div>
                 </div> <!-- end row -->
             </div> <!-- end container -->
-        </section>        
+        </section>
         <!-- end page-title -->
 
 
@@ -133,121 +171,79 @@
         <section class="service-single-section section-padding">
             <div class="container">
                 <div class="row">
-                    <div class="col col-md-9 col-md-push-3">
+                    <div class="col col-md-10 col-md-push-2">
                         <div class="service-single-content">
                             <div class="service-single-img-holder">
-                                <img src="assets/images/service-single/asset1.jpg" alt>
+                                <img src="assets/images/cid1.png" alt="Critical Infrastructure 1">
                             </div>
-                            <h2>Subsurface Engineering</h2>
-                            <p><B><span style="color: #151222; font-weight: bold;">Reservoir Studies and Data
-                                acquisition: Cased-Hole
-                                Logging, etc.</span>
-                                <br>▪ Production, Saturation & Noise
-                                Logging.<br>
-                                ▪ Leak Detection<br>
-                                ▪ Determining Zones of Water or Gas
-                                Production<br>
-                                ▪ Multi barriers corrosion
-                                identification.<br>
-                                ▪ Loss of circulation identification
-                                Asset Evaluation & Reservoir<br>
+                            <h2>Critical Infrastructure Services</h2>
+                            <p>We provide comprehensive critical infrastructure solutions, ensuring the reliability and
+                                security of vital assets. Our services cover a wide range of needs, from design and
+                                construction to maintenance and optimization.</p>
 
-                                <br><span style="color: #151222; font-weight: bold;">Management Plan</span><br>
-                                ▪ Static & Dynamic Reservoir Modelling<br>
-                                ▪ Formation Evaluation<br>
-                                ▪ Field Surveillance Plan<br>
-                                ▪ Reserve Estimation<br>
-                                ▪ Project Economic Evaluation<br>
-                                
-                                <br><span style="color: #151222; font-weight: bold;">Remaining Oil Studies</span><br>
-                                ▪ Target low hanging fruits<br>
-                                ▪ Perforations, water shut offs
-                            </B></p>
-                                                            <!-- <blockquote>
-                                <p>Raising a heavy fur muff that covered the whole of her lower arm towards the viewer gregor then turned to look out</p>
-                                <span>-Jhon smith</span>
-                            </blockquote> -->
-                            <div class="benefit clearfix">
-                                <div class="img-holder">
-                                    <img src="assets/images/service-single/asset2.jpg" alt="">
+                            <div class="benefits-grid">
+                                <div class="benefit clearfix">
+                                    <div class="img-holder">
+                                        <img src="assets/images/cid2.png" alt="Critical Infrastructure 2">
+                                    </div>
+                                    <div class="details">
+                                        <h3>Infrastructure Development</h3>
+                                        <p>Our team specializes in the development of robust infrastructure systems. We
+                                            employ cutting-edge technologies and best practices to deliver projects that
+                                            stand the test of time.</p>
+                                    </div>
                                 </div>
-                                <div class="details">
-                                    <h3>Production Management</h3>
-                                    <ul>
-                                        <li><span>1</span>
-                                            Production Enhancement
-                                            <br>▪ WASP – Wireline Applied
-                                            Stimulation Pulsing.<br>
-                                            ▪ ESP Design, Gas Lift Design
-                                            & Optimization.<br>
-                                            ▪ Well Completion Design &
-                                            Well Testing.<br>
-                                            ▪ Candidate Selection for
-                                            Workover & Sidetrack.<br>
-                                            ▪ Selection & Design of
-                                            Multiphase Pumps.
-                                            <br>▪ Choke Optimization.
-                                        </li>
-                                        <li><span>2</span>Production Process Optimization </li>
-                                        <li><span>3</span> Integrated Asset & Produced Water Management</li>
-                                        <li><span>4</span> Sustainable production capacity and maximum recovery.</li>
-                                        <li><span>5</span>Reservoir Pressure Maintenance</li>
 
-                                    </ul>
+                                <div class="benefit clearfix">
+                                    <div class="img-holder">
+                                        <img src="assets/images/cid3.png" alt="Critical Infrastructure 3">
+                                    </div>
+                                    <div class="details">
+                                        <h3>Asset Protection</h3>
+                                        <p>Protecting your critical assets is our priority. We offer advanced security
+                                            and
+                                            monitoring solutions to safeguard against potential threats and ensure
+                                            operational continuity.</p>
+                                    </div>
+                                </div>
+
+                                <div class="benefit clearfix">
+                                    <div class="img-holder">
+                                        <img src="assets/images/cid4.png" alt="Critical Infrastructure 4">
+                                    </div>
+                                    <div class="details">
+                                        <h3>Maintenance & Support</h3>
+                                        <p>Regular maintenance is key to infrastructure longevity. Our dedicated support
+                                            teams provide 24/7 monitoring and rapid response to keep your systems
+                                            running
+                                            smoothly.</p>
+                                    </div>
+                                </div>
+
+                                <div class="benefit clearfix">
+                                    <div class="img-holder">
+                                        <img src="assets/images/cid5.png" alt="Critical Infrastructure 5">
+                                    </div>
+                                    <div class="details">
+                                        <h3>Future-Ready Solutions</h3>
+                                        <p>We design with the future in mind, creating scalable and adaptable
+                                            infrastructure
+                                            that can evolve with your changing needs and technological advancements.</p>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="research">
-                                <B><h3>Integrity Inspection & Intervention </h3>
-                                <p>Integrity Inspection Assessment, NDT Solutions &
-                                    Maintenance of onshore and offshore facilities:<br>
-                                    ▪ Pipelines, Manifolds, Pumps, FPSO, FSO, MOPU.<br>
-                                    ▪ Onsite & Offsite for CALM Buoy, Standby Buoy, Mooring Systems,
-                                    Metering Skids etc.<br>
 
-                                    <br>Intervention maintenance services:<br>
-                                    ▪ TPU HVAC<br>
-                                    ▪ Subsea Intervention Works on Risers, PLEM and Pipelines
-                                    including;<br>
-                                    &nbsp;&nbsp;&nbsp;▪ Leak Repairs, Sectional Replacement,<br>
-                                    &nbsp;&nbsp;&nbsp;▪ Flow Assurance, Hydrate Remediation.<br>
-                                    ▪ Export Terminals, Storage Tanks, Metering stations & Refineries<br>
-                                    
-                                    <br>Repairs, Replacement & Recertification services:
-                                    <br>▪ PSV's, PCVs, Gauges, Recorders & SDVs<br>
-                                    ▪ CMMS Services
-                                </p></B>
-                            </div>
-                            <div class="research">
-                                <h3>De-commissioning & Abandonment</h3>
-                                <B><p> ▪ De-commissioning & Abandonment Plan<br>
-                                    ▪ Financial Planning & Cost Estimating<br>
-                                    ▪ De-commissioning Methodologies Development<br>
-                                    ▪ EPCM of De-commissioning & Abandonment<br>
-                                    ▪ Environmental remediation & restoration
-                                </p></B>
-                            </div>
-                                                       
-                            <a href="contact.html" class="theme-btn">Get the service</a>                            
+                            <a href="contact.html" class="theme-btn">Get the service</a>
                         </div>
                     </div>
-                    <div class="col col-md-3 col-md-pull-9">
+                    <div class="col col-md-2 col-md-pull-10">
                         <div class="service-sidebar">
                             <div class="widget service-list-widget">
                                 <ul>
-                                    <li><a href="services.html">All Services</a></li>
-                                    <li><a href="consultancy-services.html">Consultancy Service Delivery</a></li>
-                                    <li><a href="project-services.html">Projects Service Delivery</a></li>
-                                    <li class="current"><a href="management-services.html">Asset Management</a></li>
+                                    <li><a href="consultancy-services.html">Training & Consulting</a></li>
+                                    <li class="current"><a href="project-services.html">Operations</a></li>
+                                    <li><a href="management-services.html">EPC & EPCM</a></li>
                                 </ul>
-                            </div>
-                            <div class="widget download-widget">
-                              
-                            </div>
-                            <div class="widget contact-widget">
-                                <div>
-                                    <h5>We are industrial <span>Experts</span></h5>
-                                    <a href="contact.html">Contact Us</a>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -271,10 +267,11 @@
                                     achieve target growth and create exceptional value.</p>
                                 <div class="social">
                                     <ul>
-                                        <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
-                                        <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
-                                        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                                        <li><a href="#" title="Facebook"><i class="fa-brands fa-facebook"></i></a></li>
+                                        <li><a href="#" title="Twitter"><i class="fa-brands fa-x-twitter"></i></a></li>
+                                        <li><a href="#" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a></li>
+                                        <li><a href="#" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
@@ -290,11 +287,6 @@
                                     <li><a href="services.html">Our services</a></li>
                                     <li><a href="contact.html">Contact</a></li>
                                 </ul>
-                                <!-- <ul>
-                                    <li><a href="#">Provacu Policy</a></li>
-                                    <li><a href="#">FAQ</a></li>
-                                    <li><a href="#">News</a></li>
-                                </ul> -->
                             </div>
                         </div>
                         <div class="col col-lg-5 col-md-3 col-sm-6">
@@ -303,7 +295,7 @@
                                     <h3>Address Location</h3>
                                 </div>
                                 <ul>
-                                    <li>D1, Winston Terraces,<br> 
+                                    <li>D1, Winston Terraces,<br>
                                         Innocent Idibia Street,<br>
                                         Ikate Lekki,<br>
                                         Lagos State.</li>
@@ -314,8 +306,8 @@
                             </div>
                         </div>
                     </div>
-                     <!-- Permits Section -->
-                     <div class="row">
+                    <!-- Permits Section -->
+                    <div class="row">
                         <div class="col col-xs-12">
                             <div class="widget permits-widget">
                                 <div class="widget-title">
@@ -323,10 +315,12 @@
                                 </div>
                                 <div class="permits-grid">
                                     <div class="permit-item">
-                                        <img src="assets/images/permits1.png" alt="JACHINS Permit 1" onclick="openPreview(this.src)" class="permit-image">
+                                        <img src="assets/images/permits1.png" alt="JACHINS Permit 1"
+                                            onclick="openPreview(this.src)" class="permit-image">
                                     </div>
                                     <div class="permit-item">
-                                        <img src="assets/images/permits2.png" alt="JACHINS Permit 2" onclick="openPreview(this.src)" class="permit-image">
+                                        <img src="assets/images/permits2.png" alt="JACHINS Permit 2"
+                                            onclick="openPreview(this.src)" class="permit-image">
                                     </div>
                                 </div>
                             </div>
@@ -339,7 +333,10 @@
                     <div class="row">
                         <div class="separator"></div>
                         <div class="col col-xs-12">
-                            <p class="copyright">Copyright &copy; <script>document.write(new Date().getFullYear());</script> JACHINS Development Limited. All rights reserved.</p>
+                            <p class="copyright">Copyright &copy;
+                                <script>document.write(new Date().getFullYear());</script> JACHINS Development Limited.
+                                All rights reserved.
+                            </p>
                             <div class="short-links">
                                 <ul>
                                     <li><a href="#">Privacy</a></li>
@@ -387,5 +384,4 @@
     <script src="assets/js/lazyload.js"></script>
 </body>
 
-<!-- Mirrored from quomodosoft.com/html/nictorys/mechanical-works.html by  Website Copier/3.x [XR&CO'2014], Mon, 27 Jan 2025 08:54:07 GMT -->
 </html>

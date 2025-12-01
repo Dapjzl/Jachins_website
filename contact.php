@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     try {
         // SMTP Configuration
         $mail->isSMTP();
-        $mail->Host = 'smtp.gmail.com'; // e.g., smtp.gmail.com
+        $mail->Host = 'smtp.gmail.com'; 
         $mail->SMTPAuth = true;
         $mail->Username = 'your-email@example.com';
         $mail->Password = 'your-email-password';
@@ -28,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Email Content
         $mail->setFrom($email, $name);
-        $mail->addAddress('your-email@example.com'); // Receiver
+        $mail->addAddress('your-email@example.com'); 
         $mail->Subject = "New Contact Us Message";
         $mail->Body = "Name: $name\nEmail: $email\n\nMessage:\n$message";
 
