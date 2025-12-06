@@ -2267,8 +2267,6 @@ img {
 /* Make the topbar slightly taller and ensure text/icons are black for better contrast */
 .header-style-1 .topbar,
 .header-style-2 .topbar {
-  padding: 12px 0;
-  /* increases top/bottom space */
   font-size: 15px;
 }
 
@@ -3201,15 +3199,19 @@ img {
 
 .site-footer .about-widget .social ul {
   list-style: none;
-  display: inline-block;
+  display: block;
 }
 
 .site-footer .about-widget .social ul li {
-  float: left;
+  float: none;
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
 .site-footer .about-widget .social ul>li+li {
-  margin-left: 10px;
+  margin-left: 0;
+  margin-top: 12px;
 }
 
 .site-footer .about-widget .social ul li a {
@@ -3217,18 +3219,27 @@ img {
   width: 35px;
   height: 35px;
   line-height: 35px;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 13px;
   font-size: 0.86667rem;
   color: #c2c4c8;
-  border-radius: 3px;
+  border-radius: 50%;
   text-align: center;
   border: 1px solid #c2c4c8;
+  flex-shrink: 0;
 }
 
 .site-footer .about-widget .social ul li a:hover {
   background-color: #ff0000;
   border-color: #ff0000;
+}
+
+.site-footer .about-widget .social ul li .social-name {
+  font-size: 14px;
+  color: #c2c4c8;
+  font-weight: 400;
 }
 
 .site-footer .link-widget {
@@ -4851,7 +4862,7 @@ img[role="button"]:focus {
 --------------------------------------------------------------*/
 .partners-section .container {
   position: relative;
-  padding: 50px 20px;
+  padding: 20px 20px;
 }
 
 .partners-section .separator {
@@ -5170,10 +5181,7 @@ img[role="button"]:focus {
   height: 100%;
   border: 0;
   outline: 0;
-  filter: gray;
-  /* IE6-9 */
-  -webkit-filter: grayscale(99%);
-  /* Chrome 19+ & Safari 6+ */
+  /* Greyscale filters removed to show map in full color */
   -webkit-backface-visibility: hidden;
   /* Fix for transition flickering */
 }
@@ -8716,4 +8724,16 @@ img[role="button"]:focus {
   top: 1px;
   color: #ff0000;
   ;
+}
+/* Fix for 'Where we are' section title underline length */
+.whoweare-section .section-title h2 {
+    display: inline-block;
+}
+
+.whoweare-section .section-title h2:before {
+    width: 100%;
+}
+
+.whoweare-section .section-title h2:after {
+    display: none;
 }

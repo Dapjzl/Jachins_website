@@ -226,7 +226,7 @@
 
 
         <!-- start vision-mission-section -->
-        <section class="vision-mission-section">
+        <section class="vision-mission-section section-padding" style="background-color: #f7f9fa;">
             <div class="container">
                 <div class="row align-items-center">
                     <!-- Left Column - Image -->
@@ -240,18 +240,18 @@
                     <div class="col-md-6">
                         <div class="vision-mission-content">
                             <!-- Vision Box -->
-                            <div class="vision-box">
+                            <div class="vision-box" style="margin-bottom: 50px; margin-top: 60px;">
                                 <div class="icon-holder">
-                                    <img src="assets/images/features/01.png" alt="Vision Icon">
+                                    <img src="assets/images/features/01.png" style="width: 50px;" alt="Vision Icon">
                                 </div>
                                 <h3>Vision Statement</h3>
                                 <p>To be the leading light for sustainable and landmark development in Africa.</p>
                             </div>
 
                             <!-- Mission Box -->
-                            <div class="mission-box">
+                            <div class="mission-box" style="margin-bottom: 50px;">
                                 <div class="icon-holder">
-                                    <img src="assets/images/features/02.png" alt="Mission Icon">
+                                    <img src="assets/images/features/02.png" style="width: 50px;" alt="Mission Icon">
                                 </div>
                                 <h3>Mission</h3>
                                 <p>To create exceptional value for clients, communities and company through safe,
@@ -262,7 +262,7 @@
                             <!-- Values Box -->
                             <div class="values-box">
                                 <div class="icon-holder">
-                                    <img src="assets/images/features/03.png" alt="Values Icon">
+                                    <img src="assets/images/features/03.png" style="width: 50px;" alt="Values Icon">
                                 </div>
                                 <h3>Values</h3>
                                 <p>
@@ -421,7 +421,7 @@
                     <div class="col col-lg-4 col-lg-offset-4 col-sm-6 col-sm-offset-3">
                         <div class="section-title-s3">
                             <span>Projects</span>
-                            <h2>See Latest Projects</h2>
+                            <h2>Latest Projects</h2>
                         </div>
                     </div>
                 </div>
@@ -733,12 +733,21 @@
                                 <div class="social">
                                     <ul>
                                         <!-- <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li> -->
-                                        <li><a href="https://x.com/jachinsgroup?t=5FbJUbQt13bUsUOoctOzFg&s=08"
-                                                target="_blank"><i class="fa-brands fa-x-twitter"></i></a></li>
-                                        <li><a href="https://www.linkedin.com/company/jachins-development-ltd"
-                                                target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
-                                        <li><a href="https://www.instagram.com/jachinsgroup/" target="_blank"><i
-                                                    class="fa-brands fa-instagram"></i></a></li>
+                                        <li>
+                                            <a href="https://x.com/jachinsgroup?t=5FbJUbQt13bUsUOoctOzFg&s=08"
+                                                target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                                            <span class="social-name">Twitter</span>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.linkedin.com/company/jachins-development-ltd"
+                                                target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                                            <span class="social-name">LinkedIn</span>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.instagram.com/jachinsgroup/" target="_blank"><i
+                                                    class="fa-brands fa-instagram"></i></a>
+                                            <span class="social-name">Instagram</span>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
@@ -749,9 +758,9 @@
                                     <h3>Important Links</h3>
                                 </div>
                                 <ul>
+                                    <li><a href="index.html">Home</a></li>
                                     <li><a href="about.html">About us</a></li>
-                                    <li><a href="about.html">The team</a></li>
-                                    <li><a href="services.html">Our services</a></li>
+                                    <li><a href="career.html">Career</a></li>
                                     <li><a href="contact.html">Contact</a></li>
                                 </ul>
                                 <!-- <ul>
@@ -809,35 +818,30 @@
                                 <script>document.write(new Date().getFullYear());</script> JACHINS Development Limited.
                                 All rights reserved.
                             </p>
-                            <div class="short-links">
-                                <ul>
-                                    <li><a href="#">Privacy</a></li>
-                                    <li><a href="#">Terms of Use</a></li>
-                                </ul>
-                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </footer>
-        <!-- end site-footer -->
-        <div class="preview-container" id="previewContainer" onclick="closePreview()">
-            <img id="previewImage" src="" alt="Preview">
-        </div>
+    </div>
+    </footer>
+    <!-- end site-footer -->
+    <div class="preview-container" id="previewContainer" onclick="closePreview()">
+        <img id="previewImage" src="" alt="Preview">
+    </div>
 
-        <script>
-            function openPreview(src) {
-                document.getElementById('previewImage').src = src;
-                document.getElementById('previewContainer').style.display = 'flex';
-            }
+    <script>
+        function openPreview(src) {
+            document.getElementById('previewImage').src = src;
+            document.getElementById('previewContainer').style.display = 'flex';
+        }
 
-            function closePreview() {
-                document.getElementById('previewContainer').style.display = 'none';
-            }
-        </script>
-        <div class="preview-container" id="previewContainer" onclick="closePreview()">
-            <img id="previewImage" src="" alt="Preview">
-        </div>
+        function closePreview() {
+            document.getElementById('previewContainer').style.display = 'none';
+        }
+    </script>
+    <div class="preview-container" id="previewContainer" onclick="closePreview()">
+        <img id="previewImage" src="" alt="Preview">
+    </div>
 
     </div>
     <!-- end of page-wrapper -->

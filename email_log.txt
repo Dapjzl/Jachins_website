@@ -1,0 +1,14 @@
+--- Email Logged at 2025-12-06 19:19:16 ---
+To: info@jachinsgroup.com
+Subject: New Contact Us Message from Test User
+Headers: From: test@example.com
+Reply-To: test@example.com
+X-Mailer: PHP/8.5.0
+
+Name: Test User
+Email: test@example.com
+
+Message:
+Hello from Postman
+
+
