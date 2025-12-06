@@ -24,39 +24,6 @@
     <link href="assets/css/odometer-theme-default.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
 
-    <style>
-        /* Horizontal grid for benefit sections */
-        .benefits-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 30px;
-            margin-bottom: 40px;
-        }
-
-        @media (max-width: 991px) {
-            .benefits-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        .benefits-grid .benefit {
-            margin-bottom: 0 !important;
-        }
-
-        /* Stack images above text */
-        .benefits-grid .benefit .img-holder {
-            width: 100% !important;
-            float: none !important;
-            margin: 0 0 20px 0 !important;
-        }
-
-        .benefits-grid .benefit .details {
-            width: 100% !important;
-            float: none !important;
-            padding-left: 0 !important;
-        }
-    </style>
-
 </head>
 
 <body>
@@ -84,7 +51,7 @@
                             <div class="contact-info">
                                 <ul>
                                     <li><i class="ti-mobile"></i> +234-805-480-4131, +234-803-975-4139</li>
-                                    <li><i class="ti-email"></i> info@jachins.com</li>
+                                    <li><i class="ti-email"></i> info@jachinsgroup.com</li>
                                     <li><i class="ti-time"></i> Mon - Fri 9AM - 6PM</li>
                                 </ul>
                             </div>
@@ -172,66 +139,298 @@
             <div class="container">
                 <div class="row">
                     <div class="col col-md-10 col-md-push-2">
-                        <div class="service-single-content">
-                            <div class="service-single-img-holder">
-                                <img src="assets/images/cid1.png" alt="Critical Infrastructure 1">
+                        <div class="service-single-content operations-experience">
+                            <div class="operations-hero-media">
+                                <img src="assets/images/cid1.png" alt="Critical infrastructure control room">
+                                <div class="operations-hero-overlay">
+                                    <p class="eyebrow">Operations · Critical Infrastructure</p>
+                                    <h1>We keep essential networks resilient—from terminals and depots to grid-scale
+                                        utilities.</h1>
+                                    <p>Dedicated asset managers, OEM-certified technicians, and always-on monitoring
+                                        centers sustain uptime while extending asset life.</p>
+                                </div>
                             </div>
                             <h2>Critical Infrastructure Services</h2>
-                            <p>We provide comprehensive critical infrastructure solutions, ensuring the reliability and
-                                security of vital assets. Our services cover a wide range of needs, from design and
-                                construction to maintenance and optimization.</p>
+                            <p>We provide comprehensive solutions that cover design, construction, commissioning, and
+                                day-to-day operations for mission-critical facilities. Each engagement is anchored on
+                                reliability engineering, cyber-secure automation, and local capacity building.</p>
+                            <p>JACHINS teams embed alongside operators to implement integrated maintenance plans,
+                                develop response playbooks, and deploy digital twins that anticipate failures before
+                                they happen.</p>
 
-                            <div class="benefits-grid">
-                                <div class="benefit clearfix">
-                                    <div class="img-holder">
-                                        <img src="assets/images/cid2.png" alt="Critical Infrastructure 2">
+                            <section class="operations-service-grid" aria-label="Operations delivery pillars">
+                                <article class="operations-card">
+                                    <div class="operations-card-media">
+                                        <img src="assets/images/cid2.png" alt="Infrastructure development review"
+                                            onclick="openPreview(this.src)">
                                     </div>
-                                    <div class="details">
-                                        <h3>Infrastructure Development</h3>
-                                        <p>Our team specializes in the development of robust infrastructure systems. We
-                                            employ cutting-edge technologies and best practices to deliver projects that
-                                            stand the test of time.</p>
+                                    <div class="operations-card-copy">
+                                        <p class="tag">Development</p>
+                                        <h4>Brownfield upgrades & greenfield delivery</h4>
+                                        <p>Full EPCM support for control centers, depots, and terminal utilities with
+                                            phased cutover plans that avoid production losses.</p>
+                                    </div>
+                                </article>
+                                <article class="operations-card">
+                                    <div class="operations-card-media">
+                                        <img src="assets/images/cid3.png" alt="Asset protection team"
+                                            onclick="openPreview(this.src)">
+                                    </div>
+                                    <div class="operations-card-copy">
+                                        <p class="tag">Asset Protection</p>
+                                        <h4>Integrated security & integrity programs</h4>
+                                        <p>24/7 surveillance, intrusion analytics, and corrosion monitoring guard
+                                            pipelines, tanks, and substations against physical and digital threats.</p>
+                                    </div>
+                                </article>
+                                <article class="operations-card">
+                                    <div class="operations-card-media">
+                                        <img src="assets/images/cid4.png" alt="Maintenance command center"
+                                            onclick="openPreview(this.src)">
+                                    </div>
+                                    <div class="operations-card-copy">
+                                        <p class="tag">Maintenance</p>
+                                        <h4>Lifecycle stewardship & rapid response</h4>
+                                        <p>OEM-trained technicians execute predictive, preventive, and corrective
+                                            maintenance with mobile workshops and spare-parts hubs.</p>
+                                    </div>
+                                </article>
+                                <article class="operations-card">
+                                    <div class="operations-card-media">
+                                        <img src="assets/images/cid5.png" alt="Future-ready infrastructure planning"
+                                            onclick="openPreview(this.src)">
+                                    </div>
+                                    <div class="operations-card-copy">
+                                        <p class="tag">Future-ready</p>
+                                        <h4>Scalable, adaptive infrastructure roadmaps</h4>
+                                        <p>Digital twins, modular skids, and energy-transition kits ensure assets evolve
+                                            with regulatory, ESG, and production demands.</p>
+                                    </div>
+                                </article>
+                            </section>
+
+                            <section class="operations-strategy">
+                                <div class="strategy-copy">
+                                    <h3>Operations blueprint</h3>
+                                    <p>Our operating model blends ISO 55000 asset management practices with local
+                                        content excellence. Engagements are structured into sprints that deliver
+                                        measurable reliability gains.</p>
+                                    <ul>
+                                        <li><span>01</span><strong></strong>Criticality assessments and risk-ranked
+                                            maintenance master plans:</strong> We conduct comprehensive failure mode and
+                                            effects analysis (FMEA) to identify critical assets, establishing
+                                            priority-based maintenance schedules that optimize resource allocation and
+                                            minimize operational risks.</li>
+                                        <li><span>02</span><strong></strong>Integrated control room buildouts with
+                                            SCADA, cybersecurity, and outage playbooks:</strong> Our control centers
+                                            feature redundant supervisory control and data acquisition (SCADA) systems,
+                                            hardened against cyber threats through multi-layer security protocols,
+                                            complemented by documented emergency response procedures.</li>
+                                        <li><span>03</span><strong>Field execution squads for pipelines, tank farms,
+                                                terminals, and utility systems:</strong> Dedicated teams of
+                                            OEM-certified technicians execute planned maintenance, emergency repairs,
+                                            and integrity inspections across diverse infrastructure assets, supported by
+                                            mobile workshops and real-time communication systems.</li>
+                                        <li><span>04</span><strong>Performance dashboards covering MTBF, availability,
+                                                and sustainability KPIs:</strong> Real-time analytics platforms track
+                                            mean time between failures (MTBF), overall equipment effectiveness (OEE),
+                                            energy consumption, emissions, and safety metrics to drive continuous
+                                            improvement.</li>
+                                    </ul>
+
+                                    <h4>Technical Standards & Compliance</h4>
+                                    <p>All operations are executed in accordance with international best practices and
+                                        regulatory frameworks:</p>
+                                    <ul>
+                                        <li><span>•</span>ISO 55000/55001 - Asset Management Systems</li>
+                                        <li><span>•</span>ISO 14001 - Environmental Management Standards</li>
+                                        <li><span>•</span>ISO 45001 - Occupational Health & Safety</li>
+                                        <li><span>•</span>API 510/570/653 - Pressure Vessel & Piping Inspection</li>
+                                        <li><span>•</span>IEC 61511 - Safety Instrumented Systems (SIS)</li>
+                                        <li><span>•</span>NIST Cybersecurity Framework - Industrial Control Systems
+                                            Protection</li>
+                                        <li><span>•</span>Nigerian Oil & Gas Industry Content Development (NOGICD) Act
+                                        </li>
+                                    </ul>
+
+                                    <h4>Phased Implementation Approach</h4>
+                                    <p><strong>Phase 1 - Assessment & Planning (Weeks 1-4):</strong> Site surveys, asset
+                                        condition assessments, gap analysis, and development of comprehensive operations
+                                        & maintenance (O&M) manuals customized to facility-specific requirements.</p>
+                                    <p><strong>Phase 2 - Transition & Mobilization (Weeks 5-8):</strong> Team
+                                        deployment, knowledge transfer from incumbent operators, establishment of
+                                        maintenance routines, spare parts inventory optimization, and vendor
+                                        relationship activation.</p>
+                                    <p><strong>Phase 3 - Stabilization & Optimization (Months 3-6):</strong>
+                                        Implementation of predictive maintenance programs, SCADA integration,
+                                        performance baseline establishment, and initial process improvements.</p>
+                                    <p><strong>Phase 4 - Continuous Improvement (Ongoing):</strong> Data-driven
+                                        optimization, technology upgrades, training programs, and sustainability
+                                        initiatives to drive long-term value creation.</p>
+                                </div>
+                                <div class="strategy-panel operations-panel">
+                                    <h4>Reliability in numbers</h4>
+                                    <div class="accelerator">
+                                        <strong>99.5%</strong>
+                                        <p>Average availability on managed terminals after 12-month optimization.</p>
+                                    </div>
+                                    <div class="accelerator">
+                                        <strong>120+</strong>
+                                        <p>Critical infrastructure assets under JACHINS surveillance & maintenance
+                                            rosters.</p>
+                                    </div>
+                                    <div class="accelerator">
+                                        <strong>45%</strong>
+                                        <p>Reduction in unplanned downtime using predictive analytics & digital twins.
+                                        </p>
+                                    </div>
+                                    <div class="accelerator">
+                                        <strong>18,000+</strong>
+                                        <p>Annual maintenance activities executed across pipeline, terminal, and utility
+                                            infrastructure.</p>
+                                    </div>
+                                    <div class="accelerator">
+                                        <strong>24/7/365</strong>
+                                        <p>Round-the-clock monitoring and rapid-response capability for critical assets.
+                                        </p>
+                                    </div>
+                                    <div class="accelerator">
+                                        <strong>98%+</strong>
+                                        <p>Client satisfaction rating based on service delivery excellence and
+                                            reliability improvements.</p>
                                     </div>
                                 </div>
+                            </section>
 
-                                <div class="benefit clearfix">
-                                    <div class="img-holder">
-                                        <img src="assets/images/cid3.png" alt="Critical Infrastructure 3">
-                                    </div>
-                                    <div class="details">
-                                        <h3>Asset Protection</h3>
-                                        <p>Protecting your critical assets is our priority. We offer advanced security
-                                            and
-                                            monitoring solutions to safeguard against potential threats and ensure
-                                            operational continuity.</p>
-                                    </div>
+                            <section class="operations-insights" aria-label="Operations insights">
+                                <div class="insight-card">
+                                    <h3>Control & automation</h3>
+                                    <p>Deploying redundant PLC/SCADA architectures with cyber-hardened networks to keep
+                                        remote facilities under unified command.</p>
                                 </div>
+                                <div class="insight-card">
+                                    <h3>Emergency readiness</h3>
+                                    <p>Tabletop drills, mutual-aid coordination, and logistics staging shorten mean time
+                                        to recover when disruptions occur.</p>
+                                </div>
+                                <div class="insight-card">
+                                    <h3>Sustainability</h3>
+                                    <p>Energy efficiency retrofits, flare & emissions management, and water stewardship
+                                        programs drive ESG compliance.</p>
+                                </div>
+                            </section>
 
-                                <div class="benefit clearfix">
-                                    <div class="img-holder">
-                                        <img src="assets/images/cid4.png" alt="Critical Infrastructure 4">
-                                    </div>
-                                    <div class="details">
-                                        <h3>Maintenance & Support</h3>
-                                        <p>Regular maintenance is key to infrastructure longevity. Our dedicated support
-                                            teams provide 24/7 monitoring and rapid response to keep your systems
-                                            running
-                                            smoothly.</p>
-                                    </div>
-                                </div>
+                            <!-- Executed Projects Section -->
+                            <section class="executed-projects-section">
+                                <h2>Critical Infrastructure Projects</h2>
+                                <p class="section-subtitle">Proven track record delivering reliable operations across
+                                    essential energy infrastructure</p>
 
-                                <div class="benefit clearfix">
-                                    <div class="img-holder">
-                                        <img src="assets/images/cid5.png" alt="Critical Infrastructure 5">
-                                    </div>
-                                    <div class="details">
-                                        <h3>Future-Ready Solutions</h3>
-                                        <p>We design with the future in mind, creating scalable and adaptable
-                                            infrastructure
-                                            that can evolve with your changing needs and technological advancements.</p>
-                                    </div>
+                                <div class="projects-grid">
+                                    <article class="project-showcase-card">
+                                        <div class="project-image-wrapper">
+                                            <img src="assets/images/completed_engineering.png" alt="Engineering Project"
+                                                onclick="openPreview(this.src)" class="project-image">
+                                            <div class="project-overlay">
+                                                <span class="project-tag">Model Flowstation</span>
+                                                <span class="project-year">2020 - 2022</span>
+                                            </div>
+                                        </div>
+                                        <div class="project-content">
+                                            <h4>Engineering Design & Model Flowstation</h4>
+                                            <p class="project-client">Oil & Gas Production Facility</p>
+                                            <div class="project-outcomes">
+                                                <div class="outcome-item">
+                                                    <strong>200%</strong>
+                                                    <span>Capacity increase</span>
+                                                </div>
+                                                <div class="outcome-item">
+                                                    <strong>98%</strong>
+                                                    <span>Budget performance</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article>
+
+                                    <article class="project-showcase-card">
+                                        <div class="project-image-wrapper">
+                                            <img src="assets/images/completed_epcim.png"
+                                                alt="Pipeline Integrity Management" onclick="openPreview(this.src)"
+                                                class="project-image">
+                                            <div class="project-overlay">
+                                                <span class="project-tag">Integrity Management</span>
+                                                <span class="project-year">2022 - 2024</span>
+                                            </div>
+                                        </div>
+                                        <div class="project-content">
+                                            <h4>Pipeline Integrity Management Program</h4>
+                                            <p class="project-client">Niger Delta Region</p>
+                                            <div class="project-outcomes">
+                                                <div class="outcome-item">
+                                                    <strong>42%</strong>
+                                                    <span>Reduction in anomalies</span>
+                                                </div>
+                                                <div class="outcome-item">
+                                                    <strong>150+ km</strong>
+                                                    <span>Pipeline coverage</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article>
+
+                                    <article class="project-showcase-card">
+                                        <div class="project-image-wrapper">
+                                            <img src="assets/images/completed_oilfield.png"
+                                                alt="Control Room Integration" onclick="openPreview(this.src)"
+                                                class="project-image">
+                                            <div class="project-overlay">
+                                                <span class="project-tag">Control Systems</span>
+                                                <span class="project-year">2023</span>
+                                            </div>
+                                        </div>
+                                        <div class="project-content">
+                                            <h4>Control Room Integration & SCADA Deployment</h4>
+                                            <p class="project-client">Production Facility</p>
+                                            <div class="project-outcomes">
+                                                <div class="outcome-item">
+                                                    <strong>100%</strong>
+                                                    <span>On-time delivery</span>
+                                                </div>
+                                                <div class="outcome-item">
+                                                    <strong>85%</strong>
+                                                    <span>Response time improvement</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article>
+
+                                    <article class="project-showcase-card">
+                                        <div class="project-image-wrapper">
+                                            <img src="assets/images/completed_oilfield1.png"
+                                                alt="Asset Reliability Optimization" onclick="openPreview(this.src)"
+                                                class="project-image">
+                                            <div class="project-overlay">
+                                                <span class="project-tag">Asset Optimization</span>
+                                                <span class="project-year">2020 - 2022</span>
+                                            </div>
+                                        </div>
+                                        <div class="project-content">
+                                            <h4>Asset Reliability Optimization Program</h4>
+                                            <p class="project-client">Tank Farm & Distribution Network</p>
+                                            <div class="project-outcomes">
+                                                <div class="outcome-item">
+                                                    <strong>48%</strong>
+                                                    <span>Reduction in unplanned downtime</span>
+                                                </div>
+                                                <div class="outcome-item">
+                                                    <strong>30%</strong>
+                                                    <span>Maintenance cost savings</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article>
                                 </div>
-                            </div>
+                            </section>
 
                             <a href="contact.html" class="theme-btn">Get the service</a>
                         </div>
@@ -239,10 +438,11 @@
                     <div class="col col-md-2 col-md-pull-10">
                         <div class="service-sidebar">
                             <div class="widget service-list-widget">
-                                <ul>
-                                    <li><a href="consultancy-services.html">Training & Consulting</a></li>
-                                    <li class="current"><a href="project-services.html">Operations</a></li>
-                                    <li><a href="management-services.html">EPC & EPCM</a></li>
+                                <ul class="sub-menu">
+                                    <li><a href="consultancy-services.html">People</a></li>
+                                    <li><a href="project-services.html">Assets</a></li>
+                                    <li class="current"><a href="management-services.html">Critical Infrastructure</a>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -267,11 +467,13 @@
                                     achieve target growth and create exceptional value.</p>
                                 <div class="social">
                                     <ul>
-                                        <li><a href="#" title="Facebook"><i class="fa-brands fa-facebook"></i></a></li>
-                                        <li><a href="#" title="Twitter"><i class="fa-brands fa-x-twitter"></i></a></li>
-                                        <li><a href="#" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a></li>
-                                        <li><a href="#" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                                        </li>
+                                        <!-- <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li> -->
+                                        <li><a href="https://x.com/jachinsgroup?t=5FbJUbQt13bUsUOoctOzFg&s=08"
+                                                target="_blank"><i class="fa-brands fa-x-twitter"></i></a></li>
+                                        <li><a href="https://www.linkedin.com/company/jachins-development-ltd"
+                                                target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
+                                        <li><a href="https://www.instagram.com/jachinsgroup/" target="_blank"><i
+                                                    class="fa-brands fa-instagram"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -301,7 +503,7 @@
                                         Lagos State.</li>
                                     <li>Phone: +234-803-975-4139</li>
                                     <li>Office Time: 8AM - 5PM</li>
-                                    <li>Email: info@jachins.com</li>
+                                    <li>Email: info@jachinsgroup.com</li>
                                 </ul>
                             </div>
                         </div>
