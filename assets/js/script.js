@@ -157,12 +157,30 @@
     var swiper = new Swiper(".swiper-container", swiperOptions);
 
     // DATA BACKGROUND IMAGE
-    var sliderBgSetting = $(".slide-bg-image");
-    sliderBgSetting.each(function (indx) {
-        if ($(this).attr("data-background")) {
-            $(this).css("background-image", "url(" + $(this).data("background") + ")");
-        }
-    });
+    // DATA BACKGROUND IMAGE
+    function updateSliderBackgrounds() {
+        var sliderBgSetting = $(".slide-bg-image");
+        var isMobile = window.matchMedia("(max-width: 767px)").matches;
+
+        sliderBgSetting.each(function (indx) {
+            var desktopBg = $(this).attr("data-background");
+            var mobileBg = $(this).attr("data-mobile-background");
+            var mobilePos = $(this).attr("data-mobile-position");
+
+            if (isMobile && mobileBg) {
+                $(this).css("background-image", "url(" + mobileBg + ")");
+                if (mobilePos) {
+                    $(this).css("background-position", mobilePos);
+                }
+            } else if (desktopBg) {
+                $(this).css("background-image", "url(" + desktopBg + ")");
+                $(this).css("background-position", ""); // Reset to CSS default for desktop
+            }
+        });
+    }
+
+    updateSliderBackgrounds();
+    $(window).on('resize', updateSliderBackgrounds);
 
 
 
@@ -171,8 +189,7 @@
     -------------------------------------------*/
     function preloader() {
         if ($('.preloader').length) {
-            $('.preloader').delay(0).fadeOut(200, function () {
-                //active wow
+            $('.preloader').delay(0).fadeOut(100, function () {
                 wow.init();
             });
         }
