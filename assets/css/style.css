@@ -1,8 +1,7 @@
 /*------------------------------------------------------------------
-[Master Stylesheet]
-Theme Name:     Nictorys - Factory & Industrial HTML Template
-Version:        1.0.0
 -------------------------------------------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap');
+
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
@@ -92,8 +91,8 @@ Version:        1.0.0
 -----------------------------*/
 :root {
   /* Typography */
-  --font-sans: "Candara", "Segoe UI", "Calibri", "Trebuchet MS", sans-serif;
-  --font-head: "Candara", "Segoe UI", "Calibri", "Trebuchet MS", sans-serif;
+  --font-sans: "Candara", "Nunito Sans", "Segoe UI", "Calibri", "Trebuchet MS", sans-serif;
+  --font-head: "Candara", "Nunito Sans", "Segoe UI", "Calibri", "Trebuchet MS", sans-serif;
   --base-font-size: 15px;
   /* keeps existing scale */
 
@@ -238,7 +237,8 @@ body {
 
 p {
   color: #000;
-  line-height: 1.7em;
+  line-height: 1.4em;
+  font-weight: 400;
 }
 
 h1,
@@ -527,8 +527,7 @@ img {
   .section-title-s2 h2,
   .section-title-s3 h2,
   .section-title-s4 h2 {
-    font-size: 30px;
-    font-size: 2rem;
+    font-size: 24px;
   }
 }
 
@@ -547,19 +546,39 @@ img {
   bottom: 0;
 }
 
-.section-title h2:after,
-.section-title-s2 h2:after,
-.section-title-s3 h2:after,
-.section-title-s4 h2:after {
-  content: "";
-  background: #ff0000;
-  ;
-  width: 19px;
-  height: 4px;
-  border-radius: 5px;
-  position: absolute;
-  right: 656px;
-  bottom: 0;
+@media (max-width: 991px) {
+
+  .section-title h2:before,
+  .section-title-s2 h2:before,
+  .section-title-s3 h2:before,
+  .section-title-s4 h2:before {
+    content: "";
+    background: #ff0000;
+    ;
+    width: 50%;
+    height: 4px;
+    border-radius: 5px;
+    position: absolute;
+    left: 0px;
+    bottom: 0;
+  }
+}
+
+@media (max-width: 767px) {
+
+  .section-title h2:before,
+  .section-title-s2 h2:before,
+  .section-title-s3 h2:before,
+  .section-title-s4 h2:before {
+    content: "";
+    background: #ff0000;
+    ;
+    width: 50%;
+    height: 4px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+  }
 }
 
 .section-title h2 span,
@@ -573,7 +592,7 @@ img {
 .section-title-s2,
 .section-title-s3,
 .section-title-s4 {
-  text-align: center;
+  text-align: left;
 }
 
 .section-title-s2 h2,
@@ -582,11 +601,11 @@ img {
   color: #fff;
 }
 
-.section-title-s2 h2:before,
+/* .section-title-s2 h2:before,
 .section-title-s3 h2:before,
 .section-title-s4 h2:before {
   left: calc(50% - 220px);
-}
+} */
 
 .section-title-s2 h2:after,
 .section-title-s3 h2:after,
@@ -4621,7 +4640,7 @@ img[role="button"]:focus {
 
 @media (max-width: 991px) {
   .why-choose-us-section .inner-area {
-    padding-bottom: 70px;
+    padding-bottom: 50px;
   }
 }
 
@@ -4865,6 +4884,16 @@ img[role="button"]:focus {
 .partners-section .container {
   position: relative;
   padding: 20px 20px;
+}
+
+@media (max-width: 767px) {
+  .partners-section .container {
+    padding-right: 0;
+  }
+
+  .partners-section .grid img {
+    width: 100%;
+  }
 }
 
 .partners-section .separator {
@@ -5380,10 +5409,7 @@ img[role="button"]:focus {
 #2.4	cta-section-s2
 --------------------------------------------------------------*/
 .cta-section-s2 {
-  background: url("../images/home_image.png") center top/cover no-repeat local;
-  background-position: 0px -100px;
   position: relative;
-  padding: 150px 0 450px;
   text-align: center;
 }
 
@@ -5394,8 +5420,10 @@ img[role="button"]:focus {
 }
 
 @media (max-width: 767px) {
-  .cta-section-s2 {
-    padding: 80px 0;
+
+  .vision-mission-img,
+  .why-choose-us-section .img-holder {
+    display: none;
   }
 }
 
