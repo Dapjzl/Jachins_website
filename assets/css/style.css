@@ -4883,13 +4883,9 @@ img[role="button"]:focus {
 --------------------------------------------------------------*/
 .partners-section .container {
   position: relative;
-  padding: 20px 20px;
 }
 
 @media (max-width: 767px) {
-  .partners-section .container {
-    padding-right: 0;
-  }
 
   .partners-section .grid img {
     width: 100%;
