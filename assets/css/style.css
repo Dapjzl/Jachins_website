@@ -726,6 +726,7 @@ img {
   .submit-btn {
     padding: 12px 15px;
     font-size: 13px;
+    width: 30%;
   }
 }
 
@@ -1587,6 +1588,12 @@ img {
   padding: 15px 24px;
   position: relative;
 }
+@media (max-width: 767px) {
+  .hide-sidebar-mobile {
+    display: none !important;
+  }
+}
+
 
 .service-sidebar .service-list-widget a:before {
   content: "";
@@ -7873,6 +7880,18 @@ img[role="button"]:focus {
   min-height: 320px;
 }
 
+@media (max-width: 991px) {
+  .consultancy-hero-media {
+    min-height: 350px;
+  }
+}
+
+@media (max-width: 767px) {
+  .consultancy-hero-media {
+    min-height: 250px;
+  }
+}
+
 .ops-compact .operations-hero-overlay .eyebrow {
   letter-spacing: 0.2em;
   opacity: 0.85;
@@ -8271,7 +8290,8 @@ img[role="button"]:focus {
     width: 100%;
     float: none;
     margin: 0 0 45px 0;
-  }
+    display: none !important;
+}
 }
 
 .service-single-section .service-single-content ul {
@@ -8443,7 +8463,7 @@ img[role="button"]:focus {
 
 @media (max-width: 991px) {
   .page-title-service {
-    height: 300px;
+    height: 400px;
   }
 }
 
@@ -8912,6 +8932,12 @@ img[role="button"]:focus {
 .executed-projects-section {
   margin-top: 80px;
   margin-bottom: 40px;
+}
+
+@media (max-width: 767px) {
+  .executed-projects-section {
+    margin-top: 30px;
+  }
 }
 
 .executed-projects-section h2 {
