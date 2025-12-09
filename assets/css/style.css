@@ -4896,6 +4896,7 @@ img[role="button"]:focus {
 
   .partners-section .grid img {
     width: 100%;
+    padding: 5px;
   }
 }
 
