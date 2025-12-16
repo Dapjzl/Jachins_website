@@ -724,7 +724,7 @@ img {
   .theme-btn,
   .theme-btn-s2,
   .submit-btn {
-    padding: 12px 15px;
+    /* padding: 12px 15px; */
     font-size: 13px;
     width: 35%;
   }
