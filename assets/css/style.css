@@ -1,6 +1,4 @@
-/*------------------------------------------------------------------
--------------------------------------------------------------------*/
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
@@ -84,15 +82,15 @@
 /*---------------------------
 	Fonts
 ----------------------------*/
-/* Using system-available Candara stack for a corporate feel */
+/* Using Poppins stack for a modern look */
 /* ----------------------------
    Project design tokens
    Minimal, additive base rules to unify fonts, colors, spacing
 -----------------------------*/
 :root {
   /* Typography */
-  --font-sans: "Candara", "Nunito Sans", "Segoe UI", "Calibri", "Trebuchet MS", sans-serif;
-  --font-head: "Candara", "Nunito Sans", "Segoe UI", "Calibri", "Trebuchet MS", sans-serif;
+  --font-sans: "Poppins", sans-serif;
+  --font-head: "Poppins", sans-serif;
   --base-font-size: 15px;
   /* keeps existing scale */
 
@@ -128,9 +126,9 @@ body {
 
 /* NOTE: Font Awesome 'Solid 900' is an icon font and is not suitable for rendering
    body text. To emulate a confident corporate tone while keeping readability,
-   use the Candara stack defined in --font-sans/--font-head and adjust weights
+   use the font defined in --font-sans/--font-head and adjust weights
    as needed. */
-/* Candara stack uses regular weight for body; keep bold 700/900 for headings */
+/* Font stack uses regular weight for body; keep bold 700/900 for headings */
 body,
 button,
 input,
@@ -1588,6 +1586,7 @@ img {
   padding: 15px 24px;
   position: relative;
 }
+
 @media (max-width: 767px) {
   .hide-sidebar-mobile {
     display: none !important;
@@ -8292,7 +8291,7 @@ img[role="button"]:focus {
     float: none;
     margin: 0 0 45px 0;
     display: none !important;
-}
+  }
 }
 
 .service-single-section .service-single-content ul {
