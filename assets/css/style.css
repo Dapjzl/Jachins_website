@@ -112,6 +112,92 @@
   /* Border radius */
   --radius-pill: 60px;
 }
+.training-section {
+ /* padding: 30px 30px;*/
+  background: white;
+}
+
+.training-container {
+  display: flex;
+  height: 670px;
+  gap: 40px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.training-text {
+  flex: 1;
+  padding-left: 10px;
+}
+
+.training-text h2 {
+  color: red;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.training-text p {
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.card {
+  background: white;
+  padding: 3px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+  box-shadow: 0px -12px 70px rgba(0, 0, 0, 0.15);
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px -12px 35px rgba(0, 0, 0, 0.18);
+}
+.card h3 {
+  color: red;
+  margin-bottom: 10px;
+  padding-left: 20px;
+}
+
+.card ul {
+  padding-left: 20px;
+}
+
+.training-image {
+  flex: 1;
+}
+
+.training-image img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.custom-list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 10px;
+}
+
+.custom-list li {
+  position: relative;
+  padding-left: 18px;
+  margin-bottom: 10px;
+  font-style: italic;
+  color: #333;
+}
+
+/* Blue dot */
+.custom-list li::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background: #007BFF;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 7px;
+}
+
 
 /* Apply tokens to a few core elements (non-destructive) */
 html {
