@@ -1,0 +1,120 @@
+ <div class="jachins-slide-content" data-swiper-parallax="300">
+        <h2 class="slide-main-title">
+            Pioneering Nigerian Excellence <br>
+            <span class="highlight">Powering Global Infastructure</span>
+        </h2>
+
+        <div class="slide-subtext" data-swiper-parallax="400">
+            <p>Precision at every joint. Our team ensures high-standard butt fusion welding for durable infrastructure.</p>
+        </div>
+
+        <div class="slide-action" data-swiper-parallax="500">
+            <a href="services.html" class="nnpc-style-btn">See More</a>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        #next
+
+<section class="about-us-section-s3 section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-md-12">
+                        <div class="about-area corporate-about">
+                            <div class="section-title corporate-title">
+                                <span>About JACHINS</span>
+                                <h2>Engineering confidence across Oil & Gas facilities</h2>
+                                <p class="subtitle" style="font-size: medium;">We integrate advisory, execution, and
+                                    asset stewardship so operators
+                                    can scale safely and sustainably.</p>
+                            </div>
+                            <div class="about-content">
+                                <div class="narrative">
+                                    <p class="lead" style="font-size: medium;">
+                                        <span style="color: #ff0000;"><B>JACHINS</B></span> delivers value-adding
+                                        services across onshore, swamp, deep-water, and industrial environments backed
+                                        by multidisciplinary teams, rigorous governance, and a commitment to local
+                                        capacity building.
+                                    </p>
+                                    <p style="font-size: medium;">
+                                        We partner with asset owners from opportunity framing through decommissioning,
+                                        aligning technology, talent, and field intelligence to unlock resilient growth.
+                                    </p>
+                                    <div class="service-range-card">
+                                        <h4>Integrated delivery scope</h4>
+                                        <p>Our mandate spans Training & Consulting, Asset Operations, and EPC/EPCM
+                                            project execution.</p>
+                                        <ul class="service-tags">
+                                            <li>Training & Consulting</li>
+                                            <li>Operations Support</li>
+                                            <li>Projects (EPC & EPCM)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="about-insights">
+                                    <div class="insight-card">
+                                        <h3>15+</h3>
+                                        <p>Years delivering complex oil & gas mandates across Nigeria.</p>
+                                    </div>
+                                    <div class="insight-card">
+                                        <h3>360°</h3>
+                                        <p>Lifecycle coverage from concept studies to brownfield rejuvenation.</p>
+                                    </div>
+                                    <div class="insight-card">
+                                        <h3>100%</h3>
+                                        <p>Nigerian-owned, meeting global QHSE and compliance benchmarks.</p>
+                                    </div>
+                                    <!-- <div class="insight-card">
+                                        <h3>100%</h3>
+                                        <p>Nigerian-owned, meeting global QHSE and compliance benchmarks.</p>
+                                    </div> -->
+                                </div>
+                            </div>
+                            <div class="value-pillars">
+                                <div class="pillar-card">
+                                    <div class="icon-circle">
+                                        <i class="ti-arrow-circle-right"></i>
+                                    </div>
+                                    <div>
+                                        <h4>People Development</h4>
+                                        <p>Structured capability programs equip teams to operate and maintain complex
+                                            assets confidently.</p>
+                                    </div>
+                                </div>
+                                <div class="pillar-card">
+                                    <div class="icon-circle">
+                                        <i class="ti-arrow-circle-right"></i>
+                                    </div>
+                                    <div>
+                                        <h4>Asset Performance</h4>
+                                        <p>Data-led monitoring, maintenance, and debottlenecking protect throughput and
+                                            integrity.</p>
+                                    </div>
+                                </div>
+                                <div class="pillar-card">
+                                    <div class="icon-circle">
+                                        <i class="ti-arrow-circle-right"></i>
+                                    </div>
+                                    <div>
+                                        <h4>Critical Infrastructure</h4>
+                                        <p>End-to-end project controls ensure facilities, pipelines, and utilities are
+                                            built and operated to spec.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- end container -->
+        </section>
+        <!-- end about-us-section-s3 -->

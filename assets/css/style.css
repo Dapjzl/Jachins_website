@@ -248,14 +248,14 @@ h6 {
 a,
 .theme-btn,
 .theme-btn-s2 {
-  color: var(--brand);
+  /* color: var(--brand); */
 }
 
 /* Buttons - keep current classes but use tokens */
 .theme-btn,
 .theme-btn-s2,
 .submit-btn {
-  border-radius: var(--radius-pill);
+  /* border-radius: var(--radius-pill); */
 }
 
 /* Spacing helpers - small safe utilities */
@@ -586,8 +586,8 @@ img {
 .section-title-s2 h2,
 .section-title-s3 h2,
 .section-title-s4 h2 {
-  font-size: 46px;
-  font-size: 3.06667rem;
+  font-size: 34px;
+  /* font-size: 3.06667rem; */
   font-weight: bold;
   margin: 0.2em 0 0;
   padding-bottom: 0.5em;
@@ -1836,8 +1836,29 @@ img {
   /* navigation open and close btn hide for width screen */
   /* style for navigation less than 992px */
   /*navbar collaps less then 992px*/
+  
+}
+/* MAKE NAVBAR FIXED */
+.site-header {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  background: #ffffff;
 }
 
+/* Optional: make navbar itself solid */
+.navigation.navbar {
+  background: #ffffff;
+  margin-bottom: 0;
+  border: none;
+}
+
+/* Add shadow for premium look */
+.site-header {
+  box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+}
 .site-header .navigation {
   background-color: #fff;
   margin-bottom: 0;
@@ -1847,6 +1868,9 @@ img {
   -o-border-radius: 0;
   -ms-border-radius: 0;
   border-radius: 0;
+  position: fixed;
+  top: 0;
+  z-index: 999;
 }
 
 .site-header .navigation>.container {
@@ -1911,7 +1935,10 @@ img {
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
     text-transform: capitalize;
   }
-
+.site-header #navbar>ul .sub-menu a {
+  color: black;
+  text-decoration: none;
+}
   .site-header #navbar>ul>.menu-item-has-children>a:before {
     font-family: "themify";
     content: "\e64b";
@@ -1933,9 +1960,10 @@ img {
   .site-header #navbar>ul>li .sub-menu a {
     display: block;
     padding: 10px 0;
-    color: #151222;
+    color: black;
     font-size: 16px;
     font-size: 1.06667rem;
+    transition: color 0.3s ease;
   }
 
   /* Ensure dropdown / submenu links use the brand color on hover/focus.
@@ -2156,6 +2184,9 @@ img {
 @media (max-width: 991px) {
   .site-header {
     /* class for show hide navigation */
+    position: sticky;
+    top: 0;
+    z-index: 999;
   }
 
   .site-header .container {
@@ -2598,7 +2629,7 @@ img {
     width: 100%;
     position: absolute;
     left: 0;
-    top: 39px;
+    top: 0px;
     z-index: 100;
   }
 
@@ -2828,12 +2859,15 @@ img {
   color: #ff0000;
   ;
 }
-
+/* 
 .header-style-2 .navigation {
   background-color: #fff;
   position: relative;
   top: 0;
-}
+  position: sticky;
+  top: 0;
+  z-index: 999;
+} */
 
 .header-style-2 .search-contact .search-toggle-btn {
   background-color: rgba(0, 0, 0, 0.2);
@@ -3187,7 +3221,7 @@ img {
 .hero-style-3 .slide-text,
 .hero-style-3 .slide-btns {
   margin: 0 auto;
-  text-align: center;
+  
 }
 
 /*--------------------------------------------------------------
@@ -3750,13 +3784,16 @@ img[role="button"]:focus {
   font-size: 0.93333rem;
   color: #c2c4c8;
 }
-
+.site-header:not(.sticky-on) #navbar > ul .sub-menu, .site-header:not(.sticky-on) #navbar .mega-menu, .site-header:not(.sticky-on) #navbar .half-mega-menu {
+  background: rgba(17, 17, 17, 0.92);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
 .site-footer .lower-footer .short-links ul a:hover {
   color: #ff0000;
   ;
 }
 
-.site-header .sticky-header {
+/* .site-header .sticky-header {
   width: 100%;
   position: fixed;
   left: 0;
@@ -3769,8 +3806,8 @@ img[role="button"]:focus {
   -ms-transition: all 0.7s;
   transition: all 0.7s;
   visibility: hidden;
-}
-
+} */
+/* 
 .site-header .sticky-on {
   background: #fff;
   text-decoration-color: #000;
@@ -3781,15 +3818,15 @@ img[role="button"]:focus {
 
 .site-header .sticky-on a {
   color: #000;
-}
+} */
 
 /* When header is NOT sticky (scrolling back up), make popup/menu text white for contrast */
-.site-header:not(.sticky-on) #navbar>ul .sub-menu,
+/* .site-header:not(.sticky-on) #navbar>ul .sub-menu,
 .site-header:not(.sticky-on) #navbar .mega-menu,
 .site-header:not(.sticky-on) #navbar .half-mega-menu {
   background: rgba(17, 17, 17, 0.92);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
-}
+} */
 
 .site-header:not(.sticky-on) #navbar>ul>li .sub-menu a,
 .site-header:not(.sticky-on) #navbar .mega-menu .mega-menu-list-holder a,
@@ -3801,11 +3838,11 @@ img[role="button"]:focus {
   color: #000;
 }
 
-.header-style-2 .sticky-on {
+/* .header-style-2 .sticky-on {
   background: #fff;
   -webkit-box-shadow: 0 0 15px rgba(197, 188, 188, 0.5);
   box-shadow: 0 0 15px rgba(197, 188, 188, 0.5);
-}
+} */
 
 /*--------------------------------------------------------------
 #0.7	features-section
@@ -5978,13 +6015,15 @@ img[role="button"]:focus {
 .corporate-about .about-insights {
   flex: 1 1 35%;
   display: grid;
+  position: relative;
   grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
   gap: 15px;
+  /* margin-top: 780px; */
 }
 
 .corporate-about .insight-card {
   border-radius: 16px;
-  padding: 20px;
+  padding: 10px;
   color: #ffffff;
   box-shadow: 0 10px 30px rgba(11, 37, 69, 0.25);
 }
@@ -9147,3 +9186,264 @@ img[role="button"]:focus {
   border-left: 1px solid #e5eaf0;
   padding-left: 20px;
 }
+/* Container for the text content */
+.jachins-slide-content {
+    text-align: left;
+    max-width: 650px;
+    margin-right: 300px;
+    padding: 20px;
+    color: #ffffff;
+}
+
+
+/* Big, Bold Main Title */
+.slide-main-title {
+    font-size: 2.8rem; /* Adjust for mobile if needed */
+    font-weight: 900;
+    line-height: 1.2;
+    /* text-transform: uppercase; */
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+    white-space: nowrap;
+    color: white;
+}
+
+/* Brand Highlight Color */
+.slide-main-title .highlight {
+    color:white;
+    display: flex;
+}
+
+/* Smaller description text under the title */
+.slide-subtext p {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 40px;
+    color: white;
+    white-space: nowrap;
+    overflow: visible;
+    display: block;
+    text-align: left;
+    margin-left: 0;
+    padding-left: 0;
+    margin-right: 20px;
+     max-width: 520px;   /* controls where line breaks naturally */
+    line-height: 1.6;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Helps text pop against images */
+}
+.slide-subtext span {
+    display: inline-block;
+     max-width: 520px;   /* controls where line breaks naturally */
+}
+/* NNPC Inspired Button Styling */
+.nnpc-style-btn {
+    display: inline-block;
+    padding: 15px 45px;
+    background-color: #ff0000;
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-left: 295px;
+    font-size: 0.9rem;
+    /* float: left; */
+    letter-spacing: 1px;
+    border: 2px solid #ff0000;
+    transition: all 0.3s ease;
+}
+
+/* Button Hover Effect */
+.nnpc-style-btn:hover {
+    background-color: transparent;
+    color: #ffffff;
+    border-color: #ffffff;
+}
+
+/* Responsive adjustment for mobile */
+@media (max-width: 768px) {
+    .slide-main-title {
+        font-size: 2.5rem;
+    }
+    .jachins-slide-content {
+        padding-left: 30px;
+    }
+}
+
+/* Container alignment */
+.jachins-linear-content {
+    text-align: left;
+    width: 100%;
+    /* Ensure the container doesn't squeeze the text */
+    max-width: 100% !important; 
+    padding-left: 10%; /* Adjust to match your first slide's left margin */
+}
+
+/* Title: Forces 'Engineering Excellence' onto one line */
+.slide-title-linear {
+    font-size: 3.5rem; /* Matches the scale of your first slide */
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 10px;
+    display: block;
+    white-space: nowrap; /* Forces one line */
+    letter-spacing: -1px;
+}
+
+/* Subtext: Forces the long sentence onto one line */
+.slide-text-linear {
+    font-size: 1.1rem;
+    color: #ffffff;
+    margin-bottom: 30px;
+    display: block;
+    white-space: nowrap; /* Forces one line */
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5); /* Improves readability over the image */
+}
+
+/* Button position */
+.slide-btns-linear {
+    display: block;
+}
+
+/* Responsive: On mobile, we MUST allow wrapping or the text will cut off the screen */
+@media (max-width: 991px) {
+    .slide-title-linear, 
+    .slide-text-linear {
+        white-space: normal; /* Allows wrapping only on smaller screens */
+        font-size: 2rem;
+    }
+    .slide-text-linear {
+        font-size: 1rem;
+    }
+}
+/* Container Spacing */
+.mb-50 { margin-bottom: 50px; }
+.mb-30 { margin-bottom: 30px; }
+.mt-40 { margin-top: 40px; }
+
+/* Header Styling */
+.eyebrow {
+    color: #ff0000;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.subtitle-main {
+    font-size: 1.2rem;
+    color: #444;
+    max-width: 700px;
+    margin: 0 auto 20px;
+}
+/* Layout Spacing */
+.section-padding { padding: 80px 0; }
+.mt-30 { margin-top: 30px; }
+.mt-60 { margin-top: 60px; }
+.mb-30 { margin-bottom: 30px; }
+
+/* Header & Text */
+.eyebrow {
+    color: #ff0000;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.subtitle-main {
+    font-size: 1.15rem;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+/* Vertical Stats Styling */
+.about-insights-vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-left: 30px;
+    margin-top:200px
+}
+
+.insight-card-v3 {
+    background: #e0dada; /* Dark industrial blue */
+    color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    border-left: 4px solid #ff0000;
+    transition: transform 0.3s ease;
+}
+
+.insight-card-v3:hover {
+    transform: translateX(10px);
+}
+
+.insight-card-v3 h3 {
+    color: #ff0000;
+    font-size: 1.8rem;
+    margin: 0;
+    font-weight: 800;
+}
+
+.insight-card-v3 p {
+    margin: 5px 0 0;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Pillar Cards (Left Aligned) */
+.pillar-card-left {
+    background: #fff;
+    padding: 40px 30px;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    
+    /* These three lines ensure equal height */
+    display: flex;
+    flex-direction: column;
+    height: 100%; 
+    
+    transition: all 0.3s ease;
+    text-align: left;
+}
+.pillar-card-left p {
+    flex-grow: 1; /* This pushes any footer content to the bottom if needed */
+    margin-bottom: 0;
+}
+.pillar-card-left:hover {
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    border-color: #ff0000;
+    transform: scale(1.05);
+}
+
+.pillar-icon {
+    font-size: 28px;
+    color: #ff0000;
+    margin-bottom: 15px;
+}
+
+.pillar-card-left h4 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.pillar-card-left p {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991px) {
+    .about-insights-vertical {
+        padding-left: 0;
+        margin-top: 40px;
+    }
+}
+
+
+
