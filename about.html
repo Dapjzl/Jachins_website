@@ -1019,8 +1019,6 @@
   </script>
   <script src="assets/js/jquery.min.js"></script>
   <script>
-    document.getElementById('yr').textContent = new Date().getFullYear();
-
     /* FAQ accordion */
     document.querySelectorAll('.faq-q').forEach(q => {
       q.addEventListener('click', () => {
@@ -1045,6 +1043,12 @@
       });
     };
 
+    const resetCounters = () => {
+      counters.forEach(c => {
+        c.textContent = '0';
+      });
+    };
+
     /* Skill bars */
     const animateSkills = () => {
       document.querySelectorAll('.skill-fill').forEach(bar => {
@@ -1052,18 +1056,13 @@
       });
     };
 
-    /* Intersection observer to trigger on scroll */
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          animateCounters();
-          animateSkills();
-          observer.disconnect();
-        }
-      });
-    }, { threshold: 0.3 });
-    const statsSection = document.querySelector('.stats-section');
-    if (statsSection) observer.observe(statsSection);
+    /* Animate stats on page load */
+    document.addEventListener('DOMContentLoaded', () => {
+      resetCounters();
+      animateCounters();
+      animateSkills();
+    });
+
   </script>
 </body>
 </html>
