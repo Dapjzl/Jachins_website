@@ -1019,14 +1019,6 @@
   </script>
   <script src="assets/js/jquery.min.js"></script>
   <script>
-    /* FAQ accordion */
-    document.querySelectorAll('.faq-q').forEach(q => {
-      q.addEventListener('click', () => {
-        const item = q.parentElement;
-        item.classList.toggle('open');
-      });
-    });
-
     /* Animated counters */
     const counters = document.querySelectorAll('.count');
     const animateCounters = () => {
@@ -1056,8 +1048,17 @@
       });
     };
 
-    /* Animate stats on page load */
+    /* FAQ accordion + animate on load */
     document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.faq-list .faq-q').forEach(q => {
+        q.addEventListener('click', () => {
+          const item = q.closest('.faq-item');
+          if (item) {
+            item.classList.toggle('open');
+          }
+        });
+      });
+
       resetCounters();
       animateCounters();
       animateSkills();
