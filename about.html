@@ -558,8 +558,8 @@
                             <li class="menu-item-has-children">
                                 <a href="#">Services</a>
                                 <ul class="sub-menu" >
-                                    <li><a href="consultancy-services.html" >People</a></li>
-                                    <li><a href="project-services.html">Assets</a></li>
+                                    <li><a href="consultancy-services.html" >People Development</a></li>
+                                    <li><a href="project-services.html">Assets Management</a></li>
                                     <li><a href="management-services.html">Critical Infrastructure</a></li>
                                 </ul>
                             </li>
@@ -1055,16 +1055,6 @@
   </script>
   <script src="assets/js/jquery.min.js"></script>
   <script>
-    document.getElementById('yr').textContent = new Date().getFullYear();
-
-    /* FAQ accordion */
-    document.querySelectorAll('.faq-q').forEach(q => {
-      q.addEventListener('click', () => {
-        const item = q.parentElement;
-        item.classList.toggle('open');
-      });
-    });
-
     /* Animated counters */
     const counters = document.querySelectorAll('.count');
     const animateCounters = () => {
@@ -1081,6 +1071,12 @@
       });
     };
 
+    const resetCounters = () => {
+      counters.forEach(c => {
+        c.textContent = '0';
+      });
+    };
+
     /* Skill bars */
     const animateSkills = () => {
       document.querySelectorAll('.skill-fill').forEach(bar => {
@@ -1088,18 +1084,22 @@
       });
     };
 
-    /* Intersection observer to trigger on scroll */
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          animateCounters();
-          animateSkills();
-          observer.disconnect();
-        }
+    /* FAQ accordion + animate on load */
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.faq-list .faq-q').forEach(q => {
+        q.addEventListener('click', () => {
+          const item = q.closest('.faq-item');
+          if (item) {
+            item.classList.toggle('open');
+          }
+        });
       });
-    }, { threshold: 0.3 });
-    const statsSection = document.querySelector('.stats-section');
-    if (statsSection) observer.observe(statsSection);
+
+      resetCounters();
+      animateCounters();
+      animateSkills();
+    });
+
   </script>
 </body>
 </html>
