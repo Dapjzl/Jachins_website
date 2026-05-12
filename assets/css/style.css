@@ -3640,18 +3640,17 @@ img {
 }
 
 .site-footer .lower-footer .copyright {
-  display: inline-block;
-  float: left;
+  display: block;
+  float: none;
+  text-align: center;
   font-size: 14px;
   font-size: 0.93333rem;
-  margin: 0;
+  margin: 0 auto;
 }
 
 @media (max-width: 991px) {
   .site-footer .lower-footer .copyright {
-    float: none;
-    display: block;
-    margin: 0 0 20px;
+    margin: 0 auto;
   }
 }
 
