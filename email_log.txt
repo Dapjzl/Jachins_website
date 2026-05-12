@@ -11,3 +11,749 @@ Email: test@example.com
 Message:
 Hello from Postman
 
+
+
+/* ==========================================================
+   JACHINS — RESPONSIVE STYLESHEET
+   Paste at the BOTTOM of style.css (after all existing rules)
+   Breakpoints: 1024px | 768px | 576px | 480px
+========================================================== */
+
+/* ─────────────────────────────────────────
+   0. GLOBAL HELPERS
+───────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .container { padding: 0 20px; }
+}
+@media (max-width: 768px) {
+  .section-padding { padding: 60px 0; }
+  h1,h2,h3 { padding-bottom: 10px; }
+}
+@media (max-width: 480px) {
+  .section-padding { padding: 44px 0; }
+}
+
+/* ─────────────────────────────────────────
+   1. NAVIGATION
+───────────────────────────────────────── */
+
+/* Fix hamburger button position on all mobile */
+@media (max-width: 991px) {
+  .site-header .navbar-header button {
+    /* override the hardcoded left:605px */
+    left: auto !important;
+    right: 15px !important;
+    top: 8px !important;
+  }
+  .navigation.navbar {
+    width: 100% !important; /* was hardcoded 700px */
+  }
+  .site-header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px;
+  }
+  .site-header .navbar-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    min-height: 60px;
+  }
+  .company-logo {
+    position: static !important;
+    width: 110px !important;
+  }
+}
+@media (max-width: 480px) {
+  .company-logo { width: 90px !important; }
+}
+
+/* ─────────────────────────────────────────
+   2. HERO SLIDER
+───────────────────────────────────────── */
+@media (max-width: 768px) {
+  .slide-main-title {
+    font-size: 1.6rem !important;
+    white-space: normal !important;
+    letter-spacing: 0 !important;
+  }
+  .slide-subtext p,
+  .slide-subtext span {
+    font-size: .9rem !important;
+    white-space: normal !important;
+    max-width: 100% !important;
+  }
+  .nnpc-style-btn {
+    margin-left: 0 !important;
+    padding: 10px 24px !important;
+    font-size: .8rem !important;
+  }
+  .slide-action { text-align: center; }
+}
+@media (max-width: 480px) {
+  .slide-main-title { font-size: 1.25rem !important; }
+  .hero-style-3 { min-height: 420px; }
+}
+
+/* ─────────────────────────────────────────
+   3. ABOUT SECTION
+───────────────────────────────────────── */
+
+/* Two-column row → single column */
+@media (max-width: 991px) {
+  .about-us-section-s3 .row {
+    flex-direction: column;
+  }
+  .about-us-section-s3 .col-lg-7,
+  .about-us-section-s3 .col-lg-5 {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: 0 0 100% !important;
+  }
+  /* Stats move below narrative */
+  .about-insights-vertical {
+    flex-direction: row !important;
+    flex-wrap: wrap;
+    gap: 12px !important;
+    padding-left: 0 !important;
+    margin-top: 28px !important;
+  }
+  .insight-card-v3 { flex: 1 1 calc(50% - 12px); }
+}
+@media (max-width: 576px) {
+  .insight-card-v3 { flex: 1 1 100%; }
+  .corporate-about { padding: 28px 20px !important; }
+  .about-us-section-s3 .service-range-card { padding-left: 14px; }
+  .service-tags { gap: 8px !important; }
+  .service-tags li { font-size: 12px; padding: 6px 12px; }
+}
+
+/* Pillar cards row → stack on small */
+@media (max-width: 991px) {
+  .about-us-section-s3 .row.mt-60 {
+    flex-wrap: wrap;
+  }
+  .about-us-section-s3 .row.mt-60 > [class*="col-"] {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: 0 0 100% !important;
+    margin-bottom: 16px;
+  }
+}
+@media (min-width: 576px) and (max-width: 991px) {
+  .about-us-section-s3 .row.mt-60 > [class*="col-"] {
+    flex: 0 0 calc(50% - 8px) !important;
+    max-width: calc(50% - 8px) !important;
+  }
+}
+@media (max-width: 768px) {
+  .pillar-card-left { padding: 28px 20px; }
+  .pillar-icon { font-size: 22px; margin-bottom: 10px; }
+}
+
+/* ─────────────────────────────────────────
+   4. SERVICES SECTION
+───────────────────────────────────────── */
+@media (max-width: 991px) {
+  .services-section-s3 { padding: 70px 0 50px; }
+  .services-head {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 10px !important;
+    margin-bottom: 36px;
+  }
+  .services-head-left h2 { font-size: 24px !important; }
+  .services-head-right p { text-align: left !important; max-width: 100%; }
+  .service-grids { grid-template-columns: repeat(2, 1fr) !important; }
+}
+@media (max-width: 600px) {
+  .service-grids { grid-template-columns: 1fr !important; }
+  .service-grids .grid .details { padding: 28px 22px 24px !important; }
+  .services-head-left h2 { font-size: 20px !important; }
+}
+
+/* sec-eyebrow label */
+.sec-eyebrow {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .3em;
+  text-transform: uppercase;
+  color: #ff0000;
+  margin-bottom: 8px;
+}
+
+/* ─────────────────────────────────────────
+   5. CTA IMAGE STRIP
+───────────────────────────────────────── */
+@media (max-width: 768px) {
+  .cta-section-s2 img { min-height: 180px; object-fit: cover; }
+}
+
+/* ─────────────────────────────────────────
+   6. PROJECTS SLIDER
+───────────────────────────────────────── */
+@media (max-width: 991px) {
+  .latest-projects-section-s2 { padding-bottom: 50px; }
+  .latest-projects-section-s2 .projects-slider .img-holder { height: 220px; }
+}
+@media (max-width: 576px) {
+  .latest-projects-section-s2 .projects-slider .img-holder { height: 180px; }
+  .proj-slider-arrow { width: 36px !important; height: 36px !important; }
+  .proj-slider-arrow svg { width: 14px !important; height: 14px !important; }
+  .proj-slider-dots { gap: 6px; margin-top: 14px; }
+  .section-title-s4 h2 { font-size: 22px; }
+}
+
+/* ─────────────────────────────────────────
+   7. WHY CHOOSE US SECTION
+───────────────────────────────────────── */
+@media (max-width: 991px) {
+  .why-choose-us-section { padding: 70px 0; }
+  .why-layout {
+    grid-template-columns: 1fr !important;
+    gap: 48px !important;
+  }
+  .why-text-col h2 { font-size: 26px !important; }
+  .why-text-col .why-intro { max-width: 100%; }
+}
+@media (max-width: 768px) {
+  .why-visual-col {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 10px !important;
+  }
+  .why-card.dark { grid-column: 1 / 3 !important; }
+  .why-card { padding: 24px 18px !important; }
+  .why-card .wc-num { font-size: 2rem !important; }
+  .why-card h4 { font-size: .85rem !important; }
+}
+@media (max-width: 480px) {
+  .why-visual-col { grid-template-columns: 1fr !important; }
+  .why-card.dark { grid-column: 1 !important; }
+  .why-text-col h2 { font-size: 22px !important; }
+}
+
+/* Skill bars responsive */
+@media (max-width: 480px) {
+  .skill-bar-wrap label { font-size: 12px; }
+  .skill-track { height: 5px; }
+}
+
+/* ─────────────────────────────────────────
+   8. PARTNERS SECTION
+───────────────────────────────────────── */
+@media (max-width: 768px) {
+  .partners-section { padding: 50px 0; }
+  .partners-section .grid img { width: 100%; max-width: 380px; margin: 0 auto; }
+  .section-title-s4 h2 { font-size: 22px; }
+}
+
+/* ─────────────────────────────────────────
+   9. FOOTER
+───────────────────────────────────────── */
+@media (max-width: 991px) {
+  .site-footer .upper-footer { padding: 60px 0 20px; }
+  .site-footer .upper-footer .col {
+    min-height: auto !important;
+    margin-bottom: 40px !important;
+    width: 100% !important;
+    float: none !important;
+  }
+  .site-footer .permits-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+  .site-footer .permit-item { max-width: 320px; width: 100%; }
+}
+@media (max-width: 576px) {
+  .site-footer .widget-title h3 { font-size: 16px; }
+  .site-footer .about-widget .social ul li { gap: 10px; }
+  .site-footer .lower-footer .copyright { text-align: center; float: none; }
+}
+
+/* ─────────────────────────────────────────
+   10. SECTION TITLE UNDERLINES (s4)
+───────────────────────────────────────── */
+.section-title-s4 { margin-bottom: 32px; }
+.section-title-s4 > span {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .25em;
+  text-transform: uppercase;
+  color: #ff0000;
+  margin-bottom: 6px;
+}
+.section-title-s4 h2 {
+  font-size: clamp(20px, 3vw, 34px);
+  font-weight: 700;
+  color: #151222;
+  position: relative;
+  padding-bottom: 16px;
+  margin: 0;
+}
+.section-title-s4 h2::before {
+  content: '';
+  position: absolute;
+  left: 0; bottom: 0;
+  width: 60px; height: 4px;
+  background: #ff0000;
+  border-radius: 3px;
+}
+.section-title-s4 h2 span { color: #ff0000; font-weight: 300; }
+
+/* ─────────────────────────────────────────
+   11. ABOUT SECTION BOTTOM RED LINE
+───────────────────────────────────────── */
+.about-us-section-s3 {
+  position: relative;
+  padding-bottom: 0;
+}
+.about-us-section-s3::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 4px;
+  background: #ff0000;
+}
+
+/* ─────────────────────────────────────────
+   12. SERVICES SECTION HEADING RED UNDERLINE
+───────────────────────────────────────── */
+.services-head {
+  position: relative;
+  padding-bottom: 24px;
+}
+.services-head::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 60px; height: 4px;
+  background: #ff0000;
+  border-radius: 2px;
+}
+
+/* ─────────────────────────────────────────
+   13. BODY COLOR FIX
+   (style.css sets body color to red — override)
+───────────────────────────────────────── */
+body { color: #1a1a1a !important; }
+p { color: #000 !important; }
+
+/* ─────────────────────────────────────────
+   14. HEADING PADDING FIX
+   (style.css adds 20px padding-bottom to all
+   headings globally which breaks layouts)
+───────────────────────────────────────── */
+h1,h2,h3,h4,h5,h6 {
+  padding-bottom: 0 !important;
+}
+/* Only apply underline spacing where needed */
+.section-title h2,
+.section-title-s2 h2,
+.section-title-s3 h2,
+.section-title-s4 h2 {
+  padding-bottom: 16px !important;
+}
+
+/* ─────────────────────────────────────────
+   15. MISC OVERFLOW FIXES
+───────────────────────────────────────── */
+.page-wrapper { overflow-x: hidden; }
+
+@media (max-width: 768px) {
+  /* Prevent horizontal scroll from fixed-width elements */
+  .slide-main-title,
+  .nnpc-style-btn,
+  .slide-subtext,
+  .jachins-slide-content { overflow: hidden; }
+
+  /* Stack Bootstrap rows properly */
+  .row { margin-left: 0 !important; margin-right: 0 !important; }
+  [class*="col-"] { padding-left: 12px !important; padding-right: 12px !important; }
+}
+
+/* ─────────────────────────────────────────
+   16. PREVIEW CONTAINER (image lightbox)
+───────────────────────────────────────── */
+.preview-container img {
+  max-width: 95vw !important;
+  max-height: 90vh !important;
+}
+
+/* ─────────────────────────────────────────
+   17. FIX HARDCODED VALUES THAT BREAK MOBILE
+───────────────────────────────────────── */
+
+/* margin-top:200px on stats column is too large */
+.about-insights-vertical {
+  margin-top: 40px !important;
+}
+
+/* nnpc button has a hardcoded margin-left:295px */
+.nnpc-style-btn {
+  margin-left: 0 !important;
+  display: inline-block;
+}
+@media (min-width: 992px) {
+  /* Re-apply a modest left offset only on desktop */
+  .nnpc-style-btn {
+    margin-left: 0 !important;
+  }
+}
+
+/* slide-action should be left-aligned, not broken by margin */
+.slide-action {
+  margin-top: 24px;
+  text-align: left;
+}
+@media (max-width: 768px) {
+  .slide-action { text-align: center; margin-top: 16px; }
+}
+
+/* ─────────────────────────────────────────
+   18. BOOTSTRAP COL RESPONSIVE OVERRIDES
+   (Bootstrap 3 col-* classes need flex help)
+───────────────────────────────────────── */
+@media (max-width: 991px) {
+  /* About section cols */
+  .col-lg-7, .col-lg-5,
+  .col-lg-4, .col-md-6,
+  .col-md-3, .col-sm-6 {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+
+  /* Three pillar cards: 2 per row on tablet */
+  .about-us-section-s3 .row.d-flex > .col-lg-4 {
+    width: 50% !important;
+    float: left;
+  }
+}
+@media (max-width: 576px) {
+  /* One column on phone */
+  .about-us-section-s3 .row.d-flex > .col-lg-4 {
+    width: 100% !important;
+    float: none !important;
+  }
+  /* Footer cols */
+  .site-footer .col-lg-4,
+  .site-footer .col-lg-3,
+  .site-footer .col-lg-5 {
+    width: 100% !important;
+    float: none !important;
+  }
+}
+
+/* ─────────────────────────────────────────
+   19. HERO SLIDER — FULL MOBILE OVERHAUL
+───────────────────────────────────────── */
+@media (max-width: 991px) {
+  .hero-style-3 {
+    height: 550px !important;
+    min-height: 550px !important;
+  }
+  .slide-inner .container {
+    padding-top: 0 !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+  .slide-main-title {
+    font-size: 1.8rem !important;
+    white-space: normal !important;
+    line-height: 1.25 !important;
+    margin-bottom: 12px !important;
+    letter-spacing: -.5px !important;
+  }
+  .slide-subtext p {
+    font-size: 1rem !important;
+    white-space: normal !important;
+    max-width: 100% !important;
+    margin-right: 0 !important;
+  }
+}
+@media (max-width: 576px) {
+  .hero-style-3 {
+    height: 460px !important;
+    min-height: 460px !important;
+  }
+  .slide-main-title {
+    font-size: 1.4rem !important;
+  }
+  .slide-subtext p { font-size: .88rem !important; }
+  .nnpc-style-btn {
+    padding: 10px 22px !important;
+    font-size: .75rem !important;
+  }
+}
+@media (max-width: 380px) {
+  .hero-style-3 { height: 400px !important; min-height: 400px !important; }
+  .slide-main-title { font-size: 1.15rem !important; }
+}
+
+/* ─────────────────────────────────────────
+   20. ABOUT SECTION — TABLET (768-991px)
+───────────────────────────────────────── */
+@media (min-width: 768px) and (max-width: 991px) {
+  .about-us-section-s3 .col-lg-7 { width: 60% !important; }
+  .about-us-section-s3 .col-lg-5 { width: 40% !important; }
+
+  .about-insights-vertical {
+    flex-direction: column !important;
+    gap: 14px !important;
+    margin-top: 0 !important;
+    padding-left: 20px !important;
+  }
+  .insight-card-v3 { flex: none !important; width: 100%; }
+}
+
+/* ─────────────────────────────────────────
+   21. SERVICES HEAD FULL-WIDTH HEADING
+───────────────────────────────────────── */
+.services-head-left {
+  flex: 1;
+  min-width: 0; /* prevent text overflow in flex */
+}
+.services-head-left h2 {
+  word-break: break-word;
+  hyphens: auto;
+}
+@media (max-width: 768px) {
+  .services-head-left h2 {
+    font-size: 22px !important;
+    line-height: 1.2 !important;
+  }
+}
+
+/* ─────────────────────────────────────────
+   22. PROJECTS SECTION HEADING
+───────────────────────────────────────── */
+@media (max-width: 768px) {
+  .latest-projects-section-s2 .container { margin-bottom: 0; }
+  .latest-projects-section-s2 .section-title-s4 { margin-bottom: 24px; }
+  .latest-projects-section-s2 .section-padding { padding-top: 50px !important; }
+}
+
+/* ─────────────────────────────────────────
+   23. WHY CHOOSE US — TABLET
+───────────────────────────────────────── */
+@media (min-width: 576px) and (max-width: 991px) {
+  .why-layout {
+    grid-template-columns: 1fr !important;
+    max-width: 620px;
+    margin: 0 auto;
+  }
+  .why-visual-col {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 14px !important;
+  }
+  .why-card.dark { grid-column: 1 / 3 !important; }
+  .why-card { padding: 28px 22px !important; }
+}
+
+/* ─────────────────────────────────────────
+   24. PARTNERS SECTION — FULL RESPONSIVE
+───────────────────────────────────────── */
+@media (max-width: 991px) {
+  .partners-section { padding: 60px 0; }
+  .partners-section .section-title-s4 { margin-bottom: 24px; }
+  .partners-section .col.col-md-12 { padding: 0 15px; }
+  .partners-section .grid { text-align: center; }
+  .partners-section .grid img {
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+}
+
+/* ─────────────────────────────────────────
+   25. FOOTER — FULL RESPONSIVE
+───────────────────────────────────────── */
+@media (max-width: 991px) {
+  /* Link widget split columns → single column */
+  .site-footer .link-widget ul {
+    width: 100% !important;
+    float: none !important;
+    border-left: none !important;
+    padding-left: 0 !important;
+  }
+  .site-footer .link-widget ul + ul { margin-top: 12px; }
+
+  /* Contact widget padding */
+  .site-footer .contact-widget { padding-left: 0 !important; }
+
+  /* Permits grid */
+  .site-footer .permits-grid {
+    justify-content: flex-start;
+  }
+}
+@media (max-width: 576px) {
+  /* Social links stack vertically (already set in base) */
+  .site-footer .about-widget .social ul { gap: 10px; }
+
+  /* Copyright full width */
+  .site-footer .lower-footer .row {
+    flex-direction: column;
+    text-align: center;
+  }
+  .site-footer .lower-footer .copyright,
+  .site-footer .lower-footer .short-links {
+    float: none !important;
+    display: block !important;
+    text-align: center !important;
+    margin: 0 0 10px !important;
+  }
+  /* Permit images full width on phone */
+  .site-footer .permit-image { max-height: 140px !important; }
+}
+
+/* ─────────────────────────────────────────
+   26. CTA BANNER IMAGE — PREVENT SQUASH
+───────────────────────────────────────── */
+@media (max-width: 768px) {
+  .cta-section-s2 .container-fluid img {
+    min-height: 160px;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+/* ─────────────────────────────────────────
+   27. PRELOADER — CENTER CORRECTLY
+───────────────────────────────────────── */
+.preloader {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+.preloader-image {
+  margin: auto;
+}
+
+/* ─────────────────────────────────────────
+   28. BACK-TO-TOP BUTTON
+───────────────────────────────────────── */
+@media (max-width: 576px) {
+  .back-to-top {
+    width: 38px !important;
+    height: 38px !important;
+    font-size: 16px !important;
+    right: 12px !important;
+    bottom: 12px !important;
+  }
+}
+
+/* ─────────────────────────────────────────
+   29. INSIGHT CARDS (about stats)
+───────────────────────────────────────── */
+@media (max-width: 576px) {
+  .insight-card-v3 {
+    padding: 18px 16px !important;
+    border-left-width: 3px !important;
+  }
+  .insight-card-v3 h3 { font-size: 1.5rem !important; }
+  .insight-card-v3 p  { font-size: .82rem !important; }
+}
+
+/* ─────────────────────────────────────────
+   30. SLIDER JS — ENSURE IMAGES ARE SAME
+       HEIGHT ACROSS ALL SCREEN SIZES
+───────────────────────────────────────── */
+.latest-projects-section-s2 .projects-slider .img-holder img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
+}
+
+/* Progress bar always full width */
+.proj-slider-progress {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Dots always centered and wrap */
+.proj-slider-dots {
+  flex-wrap: wrap;
+  padding: 0 12px;
+}
+
+/* ─────────────────────────────────────────
+   31. SERVICE GRID CARD MIN-HEIGHT LOCK
+───────────────────────────────────────── */
+@media (min-width: 601px) {
+  .service-grids .grid { min-height: 240px; }
+}
+@media (max-width: 600px) {
+  .service-grids .grid { min-height: unset; }
+}
+
+/* ─────────────────────────────────────────
+   32. OVERALL FONT-SIZE SCALING
+───────────────────────────────────────── */
+@media (max-width: 576px) {
+  html { font-size: 14px; }
+  p    { font-size: .93rem !important; line-height: 1.6 !important; }
+}
+@media (max-width: 380px) {
+  html { font-size: 13px; }
+}
+
+/* ─────────────────────────────────────────
+   33. SWIPER PAGINATION — SHOW ON MOBILE
+───────────────────────────────────────── */
+@media (max-width: 768px) {
+  .hero-slider .swiper-pagination-bullet { display: inline-block !important; }
+  .swiper-container-horizontal > .swiper-pagination-bullets {
+    bottom: 14px !important;
+  }
+}
+
+/* ─────────────────────────────────────────
+   34. TOUCH SCROLL HINT ON SLIDER
+   Shows a subtle swipe indicator on first load
+───────────────────────────────────────── */
+@media (max-width: 768px) {
+  .content-area::after {
+    content: '';
+    position: absolute;
+    right: 0; top: 0;
+    width: 40px; height: 100%;
+    background: linear-gradient(to right, transparent, rgba(0,0,0,.08));
+    pointer-events: none;
+    z-index: 2;
+  }
+}
+
+/* ─────────────────────────────────────────
+   35. ACCESSIBILITY — TAP TARGETS
+   All interactive elements min 44×44px touch area
+───────────────────────────────────────── */
+@media (max-width: 991px) {
+  .nav.navbar-nav > li > a,
+  .proj-slider-arrow,
+  .proj-slider-dot,
+  .svc-arrow,
+  .nnpc-style-btn,
+  .theme-btn,
+  .theme-btn-s2 {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+  /* Dot buttons keep circular shape */
+  .proj-slider-dot {
+    min-height: unset;
+    min-width: unset;
+  }
+}
+
+/* ─────────────────────────────────────────
+   END OF RESPONSIVE STYLESHEET
+   Total sections: 35
+   Last updated: May 2026
+───────────────────────────────────────── */

@@ -2040,6 +2040,7 @@ img {
     opacity: 1;
   }
 }
+
 @media (max-width: 991px) {
   .site-header #navbar>ul>li a {
     display: block;
@@ -10149,5 +10150,27 @@ img[role="button"]:focus {
   
 }
  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

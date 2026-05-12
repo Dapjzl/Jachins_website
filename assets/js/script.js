@@ -386,18 +386,44 @@
         = PROGRESS BAR
     -------------------------------------------*/
     function progressBar() {
-        if ($(".progress-bar").length) {
-            var $progress_bar = $('.progress-bar');
-            $progress_bar.appear();
-            $(document.body).on('appear', '.progress-bar', function () {
-                var current_item = $(this);
-                if (!current_item.hasClass('appeared')) {
-                    var percent = current_item.data('percent');
-                    current_item.css('width', percent + '%').addClass('appeared').parent().append('<span>' + percent + '%' + '</span>');
-                }
+        var $progressWrappers = $('.progress');
+        if (!$progressWrappers.length) {
+            return;
+        }
 
+        function animateBar(wrapper) {
+            var $wrapper = $(wrapper);
+            var $bar = $wrapper.find('.progress-bar');
+            if (!$bar.length || $bar.hasClass('appeared')) {
+                return;
+            }
+            var percent = $bar.data('percent') || 0;
+            $bar.css('width', percent + '%').addClass('appeared');
+            if (!$wrapper.find('span').length) {
+                $wrapper.append('<span>' + percent + '%' + '</span>');
+            }
+        }
+
+        if ('IntersectionObserver' in window) {
+            var observer = new IntersectionObserver(function (entries, obs) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        animateBar(entry.target);
+                        obs.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.15
             });
-        };
+
+            $progressWrappers.each(function () {
+                observer.observe(this);
+            });
+        } else {
+            $progressWrappers.each(function () {
+                animateBar(this);
+            });
+        }
     }
 
     progressBar();
@@ -451,89 +477,118 @@
 
 
     /*------------------------------------------
-        = PROJECTS SLIDER
-    -------------------------------------------*/
-    if ($(".projects-slider").length) {
-        $(".projects-slider").owlCarousel({
-            loop: true,
-            // margin: 30,
-            dots: false,
-            nav: true,
-            navText: ['<i class="fi flaticon-back"></i>', '<i class="fi flaticon-next"></i>'],
-            smartSpeed: 500,
-            responsive: {
-                0: {
-                    items: 1,
-                },
+    //     = PROJECTS SLIDER
+    // -------------------------------------------*/
+    // if ($(".projects-slider").length) {
+    //     $(".projects-slider").owlCarousel({
+    //         loop: true,
+    //         margin: 25,
+    //         dots: false,
+    //         nav: true,
+    //         navText: ['<span class="owl-nav-arrow">&#10094;</span>', '<span class="owl-nav-arrow">&#10095;</span>'],
+    //         smartSpeed: 800,
+    //         autoplay: true,
+    //         autoplayTimeout: 4500,
+    //         autoplayHoverPause: true,
+    //         autoplaySpeed: 800,
+    //         navSpeed: 800,
+    //         dotsSpeed: 800,
+    //         dragEndSpeed: 800,
+    //         responsive: {
+    //             0: {
+    //                 items: 1,
+    //                 margin: 15
+    //             },
 
-                550: {
-                    items: 2,
-                    center: false,
-                    margin: 10
-                },
+    //             550: {
+    //                 items: 1,
+    //                 margin: 15
+    //             },
 
-                892: {
-                    items: 3
-                },
+    //             892: {
+    //                 items: 2,
+    //                 margin: 20
+    //             },
 
-                1200: {
-                    items: 4
-                },
+    //             1200: {
+    //                 items: 2,
+    //                 margin: 25
+    //             },
 
-                1400: {
-                    items: 5
-                }
-            }
-        });
-    }
+    //             1400: {
+    //                 items: 3,
+    //                 margin: 25
+    //             }
+    //         }
+    //     });
+    // }
 
 
-    /*------------------------------------------
-        = TESTIMONIALS SLIDER S2    
-    -------------------------------------------*/
-    if ($(".testimonials-slider-s2").length) {
-        $(".testimonials-slider-s2").owlCarousel({
-            loop: true,
-            margin: 30,
-            smartSpeed: 500,
-            responsive: {
-                0: {
-                    items: 1,
-                },
+    // /*------------------------------------------
+    //     = TESTIMONIALS SLIDER S2    
+    // -------------------------------------------*/
+    // if ($(".testimonials-slider-s2").length) {
+    //     $(".testimonials-slider-s2").owlCarousel({
+    //         loop: true,
+    //         margin: 30,
+    //         smartSpeed: 500,
+    //         responsive: {
+    //             0: {
+    //                 items: 1,
+    //             },
 
-                650: {
-                    items: 2,
-                    center: false,
-                    margin: 15
-                },
+    //             650: {
+    //                 items: 2,
+    //                 center: false,
+    //                 margin: 15
+    //             },
 
-                1200: {
-                    items: 2
-                }
-            }
-        });
-    }
+    //             1200: {
+    //                 items: 2
+    //             }
+    //         }
+    //     });
+    // }
 
 
     /*------------------------------------------
         = FUNFACT
     -------------------------------------------*/
     if ($(".odometer").length) {
-        $('.odometer').appear();
-        $(document.body).on('appear', '.odometer', function (e) {
-            var odo = $(".odometer");
-            odo.each(function () {
+        var $odometer = $('.odometer');
+
+        function updateOdometers() {
+            $odometer.each(function () {
                 var countNumber = $(this).attr("data-count");
                 $(this).html(countNumber);
             });
-        });
+        }
+
+        if ('IntersectionObserver' in window) {
+            var odometerObserver = new IntersectionObserver(function (entries, obs) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        updateOdometers();
+                        obs.disconnect();
+                    }
+                });
+            }, {
+                threshold: 0.15
+            });
+
+            $odometer.each(function () {
+                odometerObserver.observe(this);
+            });
+        } else {
+            updateOdometers();
+        }
     }
 
 
     /*------------------------------------------
         = POST SLIDER
     -------------------------------------------*/
-    if ($(".post-slider".length)) {
+    if ($(".post-slider").length) {
         $(".post-slider").owlCarousel({
             mouseDrag: false,
             smartSpeed: 500,
@@ -648,3 +703,165 @@
     });
 
 })(window.jQuery);
+
+
+
+
+
+
+
+
+
+// test code
+(function () {
+  /* ── config ── */
+  var AUTO_PLAY_MS   = 3500;   // ms between auto-slides
+  var VISIBLE_MOBILE = 1;      // slides visible on mobile
+  var VISIBLE_TABLET = 2;      // slides visible on tablet
+  var VISIBLE_DESK   = 3;      // slides visible on desktop (3 of 5)
+ 
+  /* ── elements ── */
+  var wrap        = document.getElementById('projSliderWrap');
+  var track       = document.getElementById('projTrack');
+  var btnPrev     = document.getElementById('projPrev');
+  var btnNext     = document.getElementById('projNext');
+  var dotsWrap    = document.getElementById('projDots');
+  var progressBar = document.getElementById('projProgressBar');
+ 
+  if (!wrap || !track) return;
+ 
+  var slides      = track.querySelectorAll('.grid');
+  var total       = slides.length;
+  var current     = 0;
+  var autoTimer   = null;
+  var progTimer   = null;
+  var slideWidth  = 0;
+  var visible     = VISIBLE_DESK;
+ 
+  /* ── work out how many slides are visible ── */
+  function getVisible() {
+    var w = window.innerWidth;
+    if (w <= 600)  return VISIBLE_MOBILE;
+    if (w <= 991)  return VISIBLE_TABLET;
+    return VISIBLE_DESK;
+  }
+ 
+  /* ── size every slide to fill 1/visible of the wrapper ── */
+  function setDimensions() {
+    visible    = getVisible();
+    slideWidth = wrap.offsetWidth / visible;
+    track.style.width = (slideWidth * total) + 'px';
+    slides.forEach(function (s) {
+      s.style.width = slideWidth + 'px';
+    });
+    goTo(current, false); // re-snap without animation
+  }
+ 
+  /* ── build dot buttons ── */
+  function buildDots() {
+    dotsWrap.innerHTML = '';
+    var maxIndex = total - visible;
+    for (var i = 0; i <= maxIndex; i++) {
+      (function (idx) {
+        var dot = document.createElement('button');
+        dot.className = 'proj-slider-dot' + (idx === 0 ? ' active' : '');
+        dot.setAttribute('aria-label', 'Go to slide ' + (idx + 1));
+        dot.addEventListener('click', function () { goTo(idx, true); });
+        dotsWrap.appendChild(dot);
+      })(i);
+    }
+  }
+ 
+  /* ── update dots ── */
+  function updateDots() {
+    var dots = dotsWrap.querySelectorAll('.proj-slider-dot');
+    dots.forEach(function (d, i) { d.classList.toggle('active', i === current); });
+  }
+ 
+  /* ── update arrow disabled state ── */
+  function updateArrows() {
+    btnPrev.disabled = current === 0;
+    btnNext.disabled = current >= total - visible;
+  }
+ 
+  /* ── move to index ── */
+  function goTo(idx, animate) {
+    var maxIndex = total - visible;
+    current = Math.max(0, Math.min(idx, maxIndex));
+    track.style.transition = animate ? 'transform 0.55s cubic-bezier(0.4,0,0.2,1)' : 'none';
+    track.style.transform  = 'translateX(-' + (current * slideWidth) + 'px)';
+    updateDots();
+    updateArrows();
+    resetProgress();
+  }
+ 
+  /* ── auto-play ── */
+  function startAuto() {
+    stopAuto();
+    autoTimer = setInterval(function () {
+      var next = current >= total - visible ? 0 : current + 1;
+      goTo(next, true);
+    }, AUTO_PLAY_MS);
+  }
+  function stopAuto() {
+    clearInterval(autoTimer);
+    clearTimeout(progTimer);
+  }
+ 
+  /* ── progress bar animation ── */
+  function resetProgress() {
+    progressBar.style.transition = 'none';
+    progressBar.style.width = '0%';
+    clearTimeout(progTimer);
+    progTimer = setTimeout(function () {
+      progressBar.style.transition = 'width ' + AUTO_PLAY_MS + 'ms linear';
+      progressBar.style.width = '100%';
+    }, 30);
+  }
+ 
+  /* ── arrow clicks ── */
+  btnPrev.addEventListener('click', function () {
+    goTo(current - 1, true);
+    stopAuto(); startAuto();
+  });
+  btnNext.addEventListener('click', function () {
+    goTo(current + 1, true);
+    stopAuto(); startAuto();
+  });
+ 
+  /* ── pause on hover ── */
+  wrap.addEventListener('mouseenter', stopAuto);
+  wrap.addEventListener('mouseleave', function () { startAuto(); resetProgress(); });
+ 
+  /* ── touch / swipe support ── */
+  var touchStartX = 0;
+  wrap.addEventListener('touchstart', function (e) {
+    touchStartX = e.touches[0].clientX;
+    stopAuto();
+  }, { passive: true });
+  wrap.addEventListener('touchend', function (e) {
+    var diff = touchStartX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 40) {
+      goTo(diff > 0 ? current + 1 : current - 1, true);
+    }
+    startAuto();
+  }, { passive: true });
+ 
+  /* ── resize ── */
+  var resizeTimer;
+  window.addEventListener('resize', function () {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(function () {
+      setDimensions();
+      buildDots();
+    }, 200);
+  });
+ 
+  /* ── init ── */
+  setDimensions();
+  buildDots();
+  updateArrows();
+  startAuto();
+  resetProgress();
+ 
+})();
