@@ -69,7 +69,7 @@
                                 <h2 style="font-size: 100px;
                                 padding-top: 150px;
                                     letter-spacing: -2px;
-                                    color: #ff0000;
+                                    color: #c70205;
                                     font-weight: 700;
                                     margin-bottom: 10px;
                                     line-height: 1em;">Error</h2>
@@ -82,7 +82,7 @@
                                 <style>
                                     .go-home-btn {
                                         border: 1px solid #ff4a17;
-                                        background-color: #ff0000;
+                                        background-color: #c70205;
                                         color: #ffffff;
                                         border-radius: 6px;
                                         text-transform: capitalize;
@@ -103,9 +103,9 @@
                                     .go-home-btn:hover {
                                         background-color: #ffffff;
                                         /* Turns white */
-                                        color: #ff0000;
+                                        color: #c70205;
                                         /* Text turns red */
-                                        border: 1px solid #ff0000;
+                                        border: 1px solid #c70205;
                                         /* Red border */
                                     }
                                 </style>

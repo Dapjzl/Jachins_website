@@ -119,7 +119,7 @@ img {
 
   /* ── CONFLICT FIX 3: hamburger button position ── */
   .site-header .navbar-header button {
-    background-color: #ff0000;
+    background-color: #c70205;
     width: 40px;
     height: 35px;
     border: 0;
@@ -351,7 +351,7 @@ img {
   .section-title-s2 h2:before,
   .section-title-s3 h2:before {
     content: "";
-    /* background: #ff0000; */
+    /* background: #c70205; */
     width: 50%;
     height: 4px;
     border-radius: 5px;

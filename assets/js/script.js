@@ -34,6 +34,43 @@
     toggleMobileNavigation();
 
 
+    // Highlight current page in header navigation
+    function setActiveNav() {
+        var path = window.location.pathname.split('/').pop() || 'index.html';
+        if (!path) path = 'index.html';
+
+        var nav = document.querySelector('#navbar .navbar-nav');
+        if (!nav) return;
+
+        nav.querySelectorAll('li.current, li.active').forEach(function (li) {
+            li.classList.remove('current', 'active');
+        });
+
+        nav.querySelectorAll('a[href]').forEach(function (link) {
+            var href = link.getAttribute('href');
+            if (!href || href === '#') return;
+
+            var linkFile = href.split('/').pop().split('#')[0] || 'index.html';
+            if (linkFile === path) {
+                var li = link.closest('li');
+                if (li) li.classList.add('current');
+
+                var subMenu = link.closest('.sub-menu');
+                if (subMenu) {
+                    var parent = subMenu.closest('.menu-item-has-children');
+                    if (parent) parent.classList.add('current');
+                }
+            }
+        });
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', setActiveNav);
+    } else {
+        setActiveNav();
+    }
+
+
     // Function for toggle class for small menu
     function toggleClassForSmallNav() {
         var windowWidth = window.innerWidth;
@@ -737,6 +774,8 @@
         smallNavFunctionality();
 
         sortingGallery();
+
+        setActiveNav();
 
     });
 
