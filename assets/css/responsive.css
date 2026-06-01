@@ -69,7 +69,7 @@ img {
     width: auto;
   }
 }
-
+/* new code */
 /* ── CONFLICT FIX 6: about-insights-vertical huge top margin ── */
 @media (max-width: 1199px) {
   .about-insights-vertical {
@@ -981,7 +981,7 @@ img {
   /* ── Hamburger ── */
   .site-header .navbar-header button { width: 35px; height: 30px; }
   .site-header #navbar { width: 220px; }
-  .company-logo { width: 90px; }
+  /* .company-logo { width: 90px; } */
 
   /* ── Hero ── */
   .hero-style-1, .hero-style-2, .hero-style-3 { height: 420px; min-height: 420px; }
@@ -1022,4 +1022,92 @@ img {
   .site-header .navbar-header button { width: 32px; height: 28px; }
   .site-header #navbar { width: 200px; }
   .company-logo { width: 80px; }
+}
+
+
+
+/* new code */
+
+/* --- Global Slide Layout (Left-Aligned & Pushed Forward) --- */
+.slide-inner .container {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important; /* Locks everything to the same vertical line */
+    justify-content: center !important;  
+    text-align: left !important;         
+    width: 100% !important;
+    
+    /* Pushes the content forward from the left edge */
+    padding-left: 120px !important; 
+}
+
+/* Ensure text containers follow the new alignment axis */
+.slide-text {
+    width: 100% !important;
+    max-width: 800px !important; /* Prevents text from stretching too far across desktop screens */
+    text-align: left !important;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+}
+
+.slide-main-title {
+    text-align: left !important;
+    margin-left: 0 !important;
+}
+
+/* Align paragraph blocks and their internal span rows */
+.slide-subtext {
+    text-align: left !important;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+    display: block !important;
+}
+
+.slide-subtext span {
+    display: block !important;        /* Breaks each span cleanly onto its own row */
+    text-align: left !important;       
+    width: 100% !important;
+}
+
+/* --- Button Alignment Layer --- */
+.slide-action {
+    display: flex !important;
+    justify-content: flex-start !important; 
+    text-align: left !important;
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-top: 25px !important;
+}
+
+.nnpc-style-btn {
+    margin-left: 0 !important;         
+    margin-right: auto !important;
+    display: inline-block !important;
+    float: none !important;            
+}
+
+/* Hide legacy clearfixes */
+.clearfix {
+    display: none !important;
+}
+
+/* --- Responsive Mobile & Tablet Adjustments --- */
+@media (max-width: 991px) {
+    .slide-inner .container {
+        /* On smaller screens, reduce the push slightly so it doesn't clip content */
+        padding-left: 40px !important; 
+        padding-right: 20px !important;
+    }
+
+    .slide-main-title {
+        /* font-size: 28px !important;     */
+        line-height: 1.25 !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .slide-inner .container {
+        /* Clean, visible edge margin for standard mobile phones */
+        padding-left: 25px !important; 
+    }
 }
