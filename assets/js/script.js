@@ -429,6 +429,72 @@
     progressBar();
 
 
+    /*------------------------------------------
+        = SKILL BAR ANIMATION
+    -------------------------------------------*/
+    function animateSkillBars() {
+        var $skillBars = $('.skill-bar-wrap');
+        if (!$skillBars.length) {
+            return;
+        }
+
+        function animateSkillBar(wrapper) {
+            var $wrapper = $(wrapper);
+            var $skillFill = $wrapper.find('.skill-fill');
+            var $label = $wrapper.find('label span');
+
+            if (!$skillFill.length || $skillFill.hasClass('animated')) {
+                return;
+            }
+
+            var targetPercent = $skillFill.data('pct') || 0;
+            $skillFill.addClass('animated');
+
+            // Animate the progress bar width
+            $skillFill.css('width', targetPercent + '%');
+
+            // Animate the percentage count-up
+            if ($label.length) {
+                var currentCount = 0;
+                var increment = targetPercent / 50; // Controls animation smoothness (1.2s / 50 steps)
+                var countUpInterval = 24; // ~1.2 seconds total for count-up
+
+                var countInterval = setInterval(function () {
+                    currentCount += increment;
+                    if (currentCount >= targetPercent) {
+                        currentCount = targetPercent;
+                        clearInterval(countInterval);
+                    }
+                    $label.text(Math.round(currentCount) + '%');
+                }, countUpInterval);
+            }
+        }
+
+        if ('IntersectionObserver' in window) {
+            var observer = new IntersectionObserver(function (entries, obs) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        animateSkillBar(entry.target);
+                        obs.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.2
+            });
+
+            $skillBars.each(function () {
+                observer.observe(this);
+            });
+        } else {
+            // Fallback for older browsers
+            $skillBars.each(function () {
+                animateSkillBar(this);
+            });
+        }
+    }
+
+    animateSkillBars();
+
 
     /*------------------------------------------
         = PARTNERS SLIDER
