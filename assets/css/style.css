@@ -9777,7 +9777,7 @@ img[role="button"]:focus {
     color: #c70205;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 0.25em;
     display: block;
     margin-bottom: 10px;
 }
