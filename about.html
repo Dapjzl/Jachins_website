@@ -140,6 +140,8 @@
     /* ── PILLARS ───────────────────────────────────────────── */
     .pillars-section { padding: 90px 0; background: var(--nnpc-light); }
     .pillar-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 50px; }
+    .credentials-section { padding: 70px 0; background: #fff; }
+    .credentials-cards { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); margin-top: 0; }
     .pillar-card {
       background: #fff;
       border-radius: 8px;
@@ -835,9 +837,9 @@ body.body-overlay::before {
             <li class="menu-item-has-children">
               <a href="#">Services</a>
               <ul class="sub-menu">
-                <li><a href="consultancy-services.html">People</a></li>
-                <li><a href="project-services.html">Assets</a></li>
-                <li><a href="management-services.html">Critical Infrastructure</a></li>
+                <li><a href="consultancy-services.html">People<span class="sub-menu-tag">Training • Workforce • Competency</span></a></li>
+                <li><a href="project-services.html">Assets<span class="sub-menu-tag">Asset Integrity • Operations • Maintenance</span></a></li>
+                <li><a href="management-services.html">Critical Infrastructure<span class="sub-menu-tag">EPC • Engineering • Construction</span></a></li>
               </ul>
             </li>
             <li class="menu-item"><a href="csr.html">CSR</a></li>
@@ -1013,7 +1015,7 @@ body.body-overlay::before {
   </section>
 
   <!-- HISTORY TIMELINE -->
-  <section class="history-section">
+  <section id="history" class="history-section">
     <div class="container">
       <div style="max-width:760px;">
         <div class="section-label">Our Journey</div>
@@ -1148,6 +1150,50 @@ body.body-overlay::before {
             <p style="color:rgba(255,255,255,0.6);font-size:14px;margin-bottom:14px;">Want to work with us?</p>
             <a href="contact.html" style="display:inline-block;padding:12px 28px;background:var(--nnpc-green);color:#fff;border-radius:6px;font-size:14px;font-weight:600;text-decoration:none;">Get In Touch</a>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPLIANCE & CREDENTIALS -->
+  <section class="credentials-section">
+    <div class="container">
+      <div style="text-align:center; max-width:760px; margin:0 auto 36px;">
+        <div class="section-label" style="display:inline-block;">Compliance &amp; Credentials</div>
+        <div class="gold-divider" style="margin:12px auto 0;"></div>
+        <h2 class="section-heading" style="margin-top:12px;">Certified to Operate, <span>Built to Be Trusted</span></h2>
+        <p style="margin-top:16px; color:var(--nnpc-muted); font-size:15px; line-height:1.7;">JACHINS Development Limited operates under the regulatory and quality frameworks required to deliver safely across Nigeria's oil &amp; gas sector.</p>
+      </div>
+      <div class="pillar-cards credentials-cards">
+        <div class="pillar-card gold-top">
+          <div class="p-icon"><i class="ti-medall"></i></div>
+          <h3>DPR Registration</h3>
+          <p>Department of Petroleum Resources — [reg. no. / category]</p>
+        </div>
+        <div class="pillar-card">
+          <div class="p-icon"><i class="ti-shield"></i></div>
+          <h3>ISO 9001</h3>
+          <p>Quality Management System</p>
+        </div>
+        <div class="pillar-card green-top">
+          <div class="p-icon"><i class="ti-leaf"></i></div>
+          <h3>ISO 14001</h3>
+          <p>Environmental Management System</p>
+        </div>
+        <div class="pillar-card">
+          <div class="p-icon"><i class="ti-heart-broken"></i></div>
+          <h3>ISO 45001</h3>
+          <p>Occupational Health &amp; Safety</p>
+        </div>
+        <div class="pillar-card gold-top">
+          <div class="p-icon"><i class="ti-flag-alt"></i></div>
+          <h3>NCDMB Compliance</h3>
+          <p>Nigerian Content Development &amp; Monitoring Board</p>
+        </div>
+        <div class="pillar-card green-top">
+          <div class="p-icon"><i class="ti-briefcase"></i></div>
+          <h3>Vendor Registration</h3>
+          <p>[Client/operator vendor lists JDL is registered on]</p>
         </div>
       </div>
     </div>

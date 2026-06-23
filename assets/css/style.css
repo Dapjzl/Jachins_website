@@ -6368,7 +6368,7 @@ img[role="button"]:focus {
 .corporate-about {
   background: #ffffff;
   border-radius: 20px;
-  padding: 45px 55px;
+  padding: 0px 40px;
 }
 
 .corporate-about .corporate-title span {
@@ -9620,7 +9620,7 @@ img[role="button"]:focus {
 .jachins-slide-content {
     text-align: left;
     max-width: 650px;
-    margin-right: 300px;
+    margin-right: 0;
     padding: 20px;
     color: #ffffff;
 }
@@ -9628,13 +9628,12 @@ img[role="button"]:focus {
 
 /* Big, Bold Main Title */
 .slide-main-title {
-    font-size: 2.8rem; /* Adjust for mobile if needed */
-    font-weight: 900;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    font-weight: 800;
     line-height: 1.2;
-    /* text-transform: uppercase; */
-    margin-bottom: 20px;
-    letter-spacing: -1px;
-    white-space: nowrap;
+    margin-bottom: 16px;
+    letter-spacing: -0.5px;
+    white-space: normal;
     color: white;
 }
 
@@ -9646,36 +9645,35 @@ img[role="button"]:focus {
 
 /* Smaller description text under the title */
 .slide-subtext p {
-    font-size: 1.2rem;
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
     font-weight: 400;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     color: white;
-    white-space: nowrap;
-    overflow: visible;
+    white-space: normal;
     display: block;
     text-align: left;
     margin-left: 0;
     padding-left: 0;
-    margin-right: 20px;
-     max-width: 520px;   /* controls where line breaks naturally */
-    line-height: 1.6;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Helps text pop against images */
+    margin-right: 0;
+    max-width: 520px;
+    line-height: 1.55;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
 .slide-subtext span {
-    display: inline-block;
-     max-width: 520px;   /* controls where line breaks naturally */
+    display: block;
+    max-width: 100%;
 }
 /* NNPC Inspired Button Styling */
 .nnpc-style-btn {
     display: inline-block;
-    padding: 15px 45px;
+    padding: 12px 28px;
     background-color: #c70205;
     color: #ffffff;
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 700;
-    margin-left: 295px;
-    font-size: 0.9rem;
+    margin-left: 0;
+    font-size: 0.85rem;
     /* float: left; */
     letter-spacing: 1px;
     border: 2px solid #c70205;
@@ -9766,11 +9764,12 @@ img[role="button"]:focus {
     max-width: 700px;
     margin: 0 auto 20px;
 }
-/* Layout Spacing */
-.section-padding { padding: 80px 0; }
-.mt-30 { margin-top: 30px; }
-.mt-60 { margin-top: 60px; }
-.mb-30 { margin-bottom: 30px; }
+/* Layout Spacing — compact home page rhythm */
+.home-page .section-padding { padding: 64px 0; }
+.mt-30 { margin-top: 24px; }
+.mt-60 { margin-top: 40px; }
+.mb-30 { margin-bottom: 24px; }
+.home-page .pillar-row { margin-top: 40px; }
 
 /* Header & Text */
 .eyebrow {
@@ -9793,15 +9792,15 @@ img[role="button"]:focus {
 .about-insights-vertical {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 16px;
     padding-left: 30px;
-    margin-top:200px
+    margin-top: 0;
 }
 
 .insight-card-v3 {
-    background: #e0dada; /* Dark industrial blue */
+    background: #e0dada;
     color: #fff;
-    padding: 25px;
+    padding: 20px;
     border-radius: 8px;
     border-left: 4px solid #c70205;
     transition: transform 0.3s ease;
@@ -9827,7 +9826,7 @@ img[role="button"]:focus {
 /* Pillar Cards (Left Aligned) */
 .pillar-card-left {
     background: #fff;
-    padding: 40px 30px;
+    padding: 28px 24px;
     border: 1px solid #eee;
     border-radius: 12px;
     
@@ -9879,13 +9878,13 @@ img[role="button"]:focus {
 
 .services-section-s3 {
   background: #f4f5f7;
-  padding: 100px 0 80px;
+  padding: 56px 0 48px;
 }
  
 .services-head {
   display: flex; align-items: flex-end; justify-content: space-between;
-  margin-bottom: 56px;
-  gap: 24px;
+  margin-bottom: 32px;
+  gap: 20px;
 }
 .services-head-left .sec-eyebrow { color: #c70205; }
 
@@ -9963,7 +9962,7 @@ img[role="button"]:focus {
 .service-grids .grid:hover { background: #fafafa; }
  
 .service-grids .grid .details {
-  padding: 44px 40px 40px;
+  padding: 32px 28px 28px;
   position: relative;      /* keeps the decorative bg icon scoped inside */
   flex: 1;
   display: flex;
@@ -10040,7 +10039,7 @@ img[role="button"]:focus {
 
  /* the why choose us section */
 .why-choose-us-section {
-  padding: 100px 0;
+  padding: 56px 0;
   background: #fff;
   overflow: hidden;
 }
@@ -10048,7 +10047,7 @@ img[role="button"]:focus {
 .why-layout {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 80px;
+  gap: 48px;
   align-items: center;
 }
  
@@ -10067,9 +10066,10 @@ img[role="button"]:focus {
   color: #c70205; font-style: normal;
 }
 .why-text-col .why-intro {
-  font-size: 1rem; line-height: 1.75; color:  #666;
-  margin-bottom: 40px; max-width: 480px;
+  font-size: 1rem; line-height: 1.65; color:  #666;
+  margin-bottom: 24px; max-width: 480px;
 }
+.home-page .why-skills { margin-top: 20px; }
  
 /* Skills progress
 .skills { display: flex; flex-direction: column; gap: 24px; }
@@ -10112,7 +10112,7 @@ img[role="button"]:focus {
 
 /* Skills progress — Clean Corporate Design */
 .skill-bar-wrap {
-  margin: 24px 0; 
+  margin: 16px 0; 
 }
 .skill-bar-wrap label {
   font-size: 13px; 
@@ -10160,7 +10160,7 @@ img[role="button"]:focus {
  
 .why-card {
   border-radius: 10px;
-  padding: 36px 28px;
+  padding: 28px 24px;
   /* position: relative;  */
   overflow: hidden;
   transition: transform .25s;
@@ -10220,8 +10220,213 @@ img[role="button"]:focus {
 /* Inline img holder — keep for layout compat */
 .why-choose-us-section .img-holder { display: none; }
 .why-choose-us-section .inner-area {
-  
+  padding: 0;
 }
- 
+
+/* ── Home page: SEO headings, section titles, compact layout ── */
+.visually-hidden-seo {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.home-page .hero-style-3,
+.home-page .hero-slider {
+  height: clamp(550px, 68vh, 620px);
+  min-height: 550px;
+}
+
+.home-page .about-intro-row {
+  align-items: flex-start;
+}
+
+.section-title-s4 {
+  margin-bottom: 20px;
+}
+
+.section-title-s4 h2 {
+  color: #151222;
+  font-size: clamp(1.15rem, 2.2vw, 1.65rem);
+  font-weight: 500;
+  line-height: 1.45;
+  padding-bottom: 0;
+  margin: 0.15em 0 0;
+}
+
+.section-title-s4 h2 span {
+  font-weight: 500;
+  display: inline;
+}
+
+.home-page h2,
+.home-page h3,
+.home-page h4 {
+  padding-bottom: 0;
+}
+
+.home-page .latest-projects-section-s2.section-padding {
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+.home-page .partners-section {
+  padding: 44px 0 36px;
+}
+
+.home-page .partners-slider-row {
+  padding-top: 12px;
+  padding-bottom: 16px;
+}
+
+.home-page .cta-section-s2 {
+  padding: 0;
+  line-height: 0;
+}
+
+.home-page .cta-image-wrap {
+  padding: 0;
+}
+
+.home-page .cta-full-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.home-page .site-footer .upper-footer {
+  padding-top: 64px;
+  padding-bottom: 16px;
+}
+
+@media (max-width: 991px) {
+  .home-page .section-padding { padding: 48px 0; }
+  .home-page .services-section-s3 { padding: 44px 0 36px; }
+  .home-page .why-choose-us-section { padding: 44px 0; }
+  .home-page .why-layout { gap: 32px; }
+  .home-page .pillar-row { margin-top: 28px; }
+  .corporate-about { padding: 28px 24px; }
+}
+
+@media (max-width: 767px) {
+  .home-page .section-padding { padding: 40px 0; }
+  .home-page .services-section-s3 { padding: 36px 0 28px; }
+  .home-page .why-choose-us-section { padding: 36px 0; }
+  .home-page .hero-style-3,
+  .home-page .hero-slider {
+    height: clamp(400px, 62vh, 500px);
+    min-height: 400px;
+  }
+  .home-page .latest-projects-section-s2.section-padding {
+    padding-top: 36px;
+    padding-bottom: 36px;
+  }
+  .home-page .partners-section { padding: 32px 0 24px; }
+  .services-head-left h2 { font-size: 1.45rem; }
+  .why-text-col h2 { font-size: 1.45rem; }
+}
+
+@media (max-width: 480px) {
+  .pillar-card-left { padding: 22px 18px; }
+  .insight-card-v3 { padding: 16px; }
+  .insight-card-v3 h3 { font-size: 1.5rem; }
+}
+
+/* ── Pre-launch: nav sub-labels, service card links, certifications, testimonials ── */
+.sub-menu-tag {
+  display: block;
+  font-size: 11px;
+  color: #9aa0a8;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0.2px;
+  margin-top: 3px;
+  line-height: 1.35;
+}
+
+@media (min-width: 992px) {
+  .site-header #navbar .sub-menu > li > a {
+    padding-bottom: 10px;
+    white-space: normal;
+  }
+}
+
+.service-grids .grid {
+  position: relative;
+}
+
+.svc-card-link {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  text-indent: -9999px;
+  overflow: hidden;
+}
+
+.service-grids .grid:hover .svc-arrow {
+  gap: 14px;
+  color: #a00003;
+}
+
+.cert-strip {
+  padding: 28px 0;
+  text-align: center;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  background: #fafafa;
+}
+
+.cert-strip-label {
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #999;
+  margin: 0 0 14px;
+}
+
+.cert-strip-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px 32px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cert-strip-list li {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+.cert-strip-note {
+  margin: 14px 0 0;
+  font-size: 11px;
+  color: #aaa;
+  font-style: italic;
+}
+
+.home-page .testimonials-section {
+  padding: 48px 0 56px;
+}
+
+.testimonials-section .testimonial-grids .item {
+  padding: 0 20px;
+}
+
+#services,
+#projects,
+#delivery-blueprint,
+#feed-design,
+#field-supervision,
+#history {
+  scroll-margin-top: 90px;
+}
 
 

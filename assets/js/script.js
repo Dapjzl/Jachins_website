@@ -145,7 +145,7 @@
         speed: 1000,
         parallax: true,
         autoplay: {
-            delay: 6500,
+            delay: 8000,
             disableOnInteraction: false,
         },
 
@@ -192,6 +192,13 @@
     };
 
     var swiper = new Swiper(".swiper-container", swiperOptions);
+
+    if (swiper.autoplay) {
+        $(".hero-slider .swiper-container").hover(
+            function () { swiper.autoplay.stop(); },
+            function () { swiper.autoplay.start(); }
+        );
+    }
 
     // DATA BACKGROUND IMAGE
     // DATA BACKGROUND IMAGE
