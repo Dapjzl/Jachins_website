@@ -13,12 +13,10 @@ img {
   height: auto;
 }
 
-/* ── CONFLICT FIX 1: navigation.navbar fixed width ── */
 .navigation.navbar {
   width: 100% !important;
 }
 
-/* ── CONFLICT FIX 7: theme-btn 18% width too narrow above mobile ── */
 @media (min-width: 768px) {
   .theme-btn,
   .theme-btn-s2,
@@ -26,8 +24,7 @@ img {
     width: auto;
   }
 }
-/* new code */
-/* ── CONFLICT FIX 6: about-insights-vertical huge top margin ── */
+
 .about-insights-vertical {
   margin-top: 0 !important;
   padding-left: 0;
@@ -72,7 +69,6 @@ img {
   }
   .site-header .container { width: 100%; }
 
-  /* ── CONFLICT FIX 3: hamburger button position ── */
   .site-header .navbar-header button {
     background-color: #c70205;
     width: 40px;
@@ -94,20 +90,17 @@ img {
   }
   .site-header .navbar-header button span:last-child { margin: 0; }
 
-  /* ── CONFLICT FIX 2: navigation width 2789px ── */
   .header-style-1 .navigation,
   .header-style-2 .navigation {
     padding: 15px;
-    width: 100% !important;   /* was 2789px */
+    width: 100% !important;
   }
   .header-style-1 .navbar-header button,
   .header-style-2 .navbar-header button { top: 6px; }
 
-  /* ── Container fluid padding ── */
   .header-style-1 .container-fluid,
   .header-style-2 .container-fluid { padding: 0 15px; }
 
-  /* ── Topbar hidden ── */
   .header-style-1 .topbar,
   .header-style-2 .topbar {
     display: none;
@@ -116,17 +109,14 @@ img {
     padding: 5px 0;
   }
 
-  /* ── Social in topbar ── */
   .header-style-1 .social,
   .header-style-2 .social { display: none; }
 
-  /* ── Contact info in topbar ── */
   .header-style-1 .contact-info ul,
   .header-style-2 .contact-info ul { display: inline-block; }
   .header-style-1 .contact-info ul li,
   .header-style-2 .contact-info ul li { padding-top: 5px; padding-bottom: 5px; }
 
-  /* ── Navbar brand ── */
   .header-style-1 .navbar-brand,
   .header-style-2 .navbar-brand {
     padding-left: 0;
@@ -136,7 +126,6 @@ img {
     top: 2px;
   }
 
-  /* ── Search contact ── */
   .header-style-1 .search-contact,
   .header-style-2 .search-contact { right: 70px; top: 19px; }
   .header-style-1 .search-contact .header-search-form,
@@ -215,7 +204,7 @@ img {
   /* ── Hero slider ── */
   .hero-slider { height: 600px; }
   .hero-slider .swiper-button-prev,
-  .hero-slider .swiper-button-next { display: none; }
+  .hero-slider .swiper-button-next { display: flex; }
   .hero-slider .slide-subtitle { text-align: center; }
   .hero-slider .slide-title { max-width: 500px; margin: 0 auto; text-align: center; }
   .hero-slider .slide-title h2 { font-size: 50px; }
@@ -982,49 +971,49 @@ img {
   .company-logo { width: 80px; }
 }
 
-
-
-/* new code */
-
 /* --- Global Slide Layout (Left-Aligned & Pushed Forward) --- */
 .slide-inner .container {
     display: flex !important;
     flex-direction: column !important;
     align-items: flex-start !important;
     justify-content: center !important;
-    text-align: left !important;
+    text-align: center !important;
     width: 100% !important;
     max-width: 100% !important;
-    padding-left: clamp(20px, 8vw, 100px) !important;
+    padding-left: clamp(16px, 4vw, 40px) !important;
     padding-right: clamp(16px, 4vw, 40px) !important;
+    padding-top: 100px !important;
 }
 
 /* Ensure text containers follow the new alignment axis */
 .slide-text {
     width: 100% !important;
-    max-width: 800px !important; /* Prevents text from stretching too far across desktop screens */
+    max-width: 800px !important; 
     text-align: center !important;
-    margin-left: 0 !important;
+    margin-left: auto !important;
     margin-right: auto !important;
 }
 
 .slide-main-title {
     text-align: center !important;
-    margin-left: 0 !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
 }
 
 /* Align paragraph blocks and their internal span rows */
 .slide-subtext {
+    text-align: justify !important;
+    text-align-last: center !important;
     text-align: center !important;
-    margin-left: 0 !important;
+    margin-left: auto !important;
     margin-right: auto !important;
     display: block !important;
+    line-height: 1.5 !important;
 }
 
 .slide-subtext span {
-    display: block !important;        /* Breaks each span cleanly onto its own row */
+    display: inline !important;        
     text-align: center !important;       
-    width: 100% !important;
 }
 
 /* --- Button Alignment Layer --- */
@@ -1033,12 +1022,13 @@ img {
     justify-content: flex-start !important; 
     text-align: center !important;
     width: 100% !important;
-    margin-left: 0 !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
     margin-top: 25px !important;
 }
 
 .nnpc-style-btn {
-    margin-left: 0 !important;         
+    margin-left: auto !important;         
     margin-right: auto !important;
     display: inline-block !important;
     float: none !important;            
@@ -1073,14 +1063,14 @@ img {
 
 @media (max-width: 576px) {
     .slide-inner .container {
-        padding-left: 20px !important;
+        padding-left: 16px !important;
         padding-right: 16px !important;
     }
 }
 
 @media (max-width: 320px) {
     .slide-inner .container {
-        padding-left: 14px !important;
+        padding-left: 12px !important;
         padding-right: 12px !important;
     }
 

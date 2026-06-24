@@ -113,6 +113,21 @@
   /* Border radius */
   --radius-pill: 60px;
 }
+/* ── Global justified text ── */
+p,
+li,
+.subtitle-main,
+.client-quote,
+.about-area p,
+.service-range-card p,
+.slide-subtext,
+.cert-strip-note,
+td,
+dd,
+blockquote {
+  text-align: justify;
+}
+
 .training-section {
  /* padding: 30px 30px;*/
   background: white;
@@ -2950,7 +2965,7 @@ img {
   display: -ms-flexbox;
   display: flex;
   position: relative;
-  z-index: 0;
+  z-index: 10;
 }
 
 @media (max-width: 991px) {
@@ -3019,7 +3034,7 @@ img {
 
   .hero-slider .swiper-button-prev,
   .hero-slider .swiper-button-next {
-    display: none;
+    display: flex;
   }
 }
 
