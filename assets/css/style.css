@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 /*--------------------------------------------------------------
@@ -6388,7 +6387,7 @@ img[role="button"]:focus {
 
 .corporate-about .corporate-title span {
   text-transform: uppercase;
-  letter-spacing: 0.25em;
+  letter-spacing: 0.1em;
   color: #c70205;
   font-weight: 600;
 }
@@ -6427,7 +6426,7 @@ img[role="button"]:focus {
 
 .corporate-about .service-range-card h4 {
   font-size: 16px;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #c70205;
   margin-bottom: 10px;
@@ -8463,7 +8462,7 @@ img[role="button"]:focus {
 }
 
 .ops-compact .operations-hero-overlay .eyebrow {
-  letter-spacing: 0.2em;
+  letter-spacing: 0.1em;
   opacity: 0.85;
 }
 
@@ -8488,7 +8487,7 @@ img[role="button"]:focus {
 
 .consultancy-hero-overlay .eyebrow {
   text-transform: uppercase;
-  letter-spacing: 0.3em;
+  letter-spacing: 0.15em;
   font-size: 13px;
   font-weight: 600;
   color: #c70205;
@@ -8586,7 +8585,7 @@ img[role="button"]:focus {
 .operations-service-grid .operations-card-copy .tag {
   font-size: 13px;
   text-transform: uppercase;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.1em;
   color: #000;
   margin-bottom: 8px;
 }
@@ -8678,7 +8677,7 @@ img[role="button"]:focus {
 .strategy-panel h4 {
   margin: 0;
   color: #fff;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
   font-size: 14px;
 }
@@ -9647,7 +9646,7 @@ img[role="button"]:focus {
     font-weight: 800;
     line-height: 1.2;
     margin-bottom: 16px;
-    letter-spacing: -0.5px;
+    letter-spacing: -0.2px;
     white-space: normal;
     color: white;
 }
@@ -9690,7 +9689,7 @@ img[role="button"]:focus {
     margin-left: 0;
     font-size: 0.85rem;
     /* float: left; */
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
     border: 2px solid #c70205;
     transition: all 0.3s ease;
 }
@@ -9729,7 +9728,7 @@ img[role="button"]:focus {
     margin-bottom: 10px;
     display: block;
     white-space: nowrap; /* Forces one line */
-    letter-spacing: -1px;
+    letter-spacing: -0.4px;
 }
 
 /* Subtext: Forces the long sentence onto one line */
@@ -9768,7 +9767,7 @@ img[role="button"]:focus {
     color: #c70205;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 0.8px;
     display: block;
     margin-bottom: 10px;
 }
@@ -9791,7 +9790,7 @@ img[role="button"]:focus {
     color: #c70205;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.25em;
+    letter-spacing: 0.1em;
     display: block;
     margin-bottom: 10px;
 }
@@ -10019,18 +10018,18 @@ img[role="button"]:focus {
 .service-grids .grid h3 {
   font-family: 'Barlow Condensed', sans-serif;
   font-size: 1.3rem; font-weight: 700;
-  text-transform: uppercase; letter-spacing: .03em;
+  text-transform: uppercase; letter-spacing: .01em;
   color: #0d0d0d; margin-bottom: 12px;
 }
 .service-grids .grid p {
-  font-size: .88rem; line-height: 1.65; color: #666;
-  flex: 1; /* push arrow to bottom */
+  font-size: .88rem; line-height: 1.65; color: #000;
+  flex: 1; 
 }
  
 .svc-arrow {
   display: inline-flex; align-items: center; gap: 8px;
   margin-top: 22px; font-size: .8rem; font-weight: 700;
-  text-transform: uppercase; letter-spacing: .12em;
+  text-transform: uppercase; letter-spacing: .04em;
   color: #c70205;
   transition: gap .2s;
   align-self: flex-start; /* stays left-aligned at bottom of card */
@@ -10205,7 +10204,7 @@ img[role="button"]:focus {
   font-family: 'Barlow Condensed', sans-serif;
    font-size: 1rem; 
    font-weight: 700;
-  text-transform: uppercase; letter-spacing: .06em; margin-bottom: 10px;
+  text-transform: uppercase; letter-spacing: .02em; margin-bottom: 10px;
 }
 .why-card.dark h4,
 .why-card.red h4 { color: #fff; }
@@ -10359,7 +10358,7 @@ img[role="button"]:focus {
   color: #9aa0a8;
   font-weight: 400;
   text-transform: none;
-  letter-spacing: 0.2px;
+  letter-spacing: 0.1px;
   margin-top: 3px;
   line-height: 1.35;
 }
@@ -10398,7 +10397,7 @@ img[role="button"]:focus {
 
 .cert-strip-label {
   font-size: 12px;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   text-transform: uppercase;
   color: #999;
   margin: 0 0 14px;
