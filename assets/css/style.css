@@ -6381,7 +6381,7 @@ img[role="button"]:focus {
 .corporate-about {
   background: #ffffff;
   border-radius: 20px;
-  padding: 0px 40px;
+  padding: 0px;
 }
 
 .corporate-about .corporate-title span {
@@ -9773,7 +9773,7 @@ img[role="button"]:focus {
 
 .subtitle-main {
     font-size: 1.2rem;
-    color: #444;
+    color: #000;
     max-width: 700px;
     margin: 0 auto 20px;
 }
@@ -9851,10 +9851,7 @@ img[role="button"]:focus {
     transition: all 0.3s ease;
     text-align: left;
 }
-.pillar-card-left p {
-    flex-grow: 1; /* This pushes any footer content to the bottom if needed */
-    margin-bottom: 0;
-}
+
 .pillar-card-left:hover {
     box-shadow: 0 10px 30px rgba(0,0,0,0.05);
     border-color: #c70205;
@@ -9874,9 +9871,11 @@ img[role="button"]:focus {
 }
 
 .pillar-card-left p {
-    color: #666;
+    color: #000;
     font-size: 0.95rem;
     line-height: 1.6;
+    flex-grow: 1; /* This pushes any footer content to the bottom if needed */
+    margin-bottom: 0;
 }
 
 /* Responsive Adjustments */
@@ -9887,11 +9886,10 @@ img[role="button"]:focus {
     }
 }
 
-/* the claude code */
 
 .services-section-s3 {
   background: #f4f5f7;
-  padding: 56px 0 48px;
+  padding: 56px 0 90px;
 }
  
 .services-head {
@@ -10622,8 +10620,7 @@ img[role="button"]:focus {
   transform: scale(1.04);
 }
 
-/* The actual loop: shift exactly one group-width (i.e. -50% of the
-   two-group track) — since both groups are identical, the reset is invisible */
+
 @keyframes partners-marquee-scroll {
   from {
     transform: translate3d(0, 0, 0);
@@ -10677,5 +10674,57 @@ img[role="button"]:focus {
       #000 calc(100% - 32px),
       transparent 100%
     );
+  }
+}
+
+.about-us-section-s3 .about-intro-row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.about-us-section-s3 .about-intro-row > .col-lg-7,
+.about-us-section-s3 .about-intro-row > .col-lg-5 {
+  padding-left: 0;
+}
+
+.corporate-about {
+  padding-left: 0;
+  padding-right: 40px; 
+}
+
+@media (max-width: 991px) {
+  .corporate-about {
+    padding-left: 0;
+  }
+}
+
+/* Projects section heading row */
+#projects .container > .row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+#projects .services-head {
+  padding-left: 0;
+}
+
+/* Partners section heading row */
+.partners-section .container > .row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.partners-section .services-head {
+  padding-left: 0;
+}
+.about-us-section-s3 .corporate-title,
+.about-us-section-s3 .service-range-card {
+  margin-left: -23px;
+}
+
+@media (max-width: 991px) {
+  .about-us-section-s3 .corporate-title,
+  .about-us-section-s3 .service-range-card {
+    margin-left: 0;
   }
 }
