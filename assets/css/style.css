@@ -5511,7 +5511,7 @@ img[role="button"]:focus {
 .testimonials-section .testimonial-grids h4+span {
   font-size: 13px;
   font-size: 0.86667rem;
-  color: #d0d0d0;
+  color: #000;
 }
 
 .testimonials-section .client-info {
@@ -5560,7 +5560,6 @@ img[role="button"]:focus {
 .testimonials-section .client-quote p {
   font-size: 16px;
   font-size: 1.06667rem;
-  color: #b1b1b1;
   margin: 0 0 1em;
 }
 
@@ -9906,8 +9905,8 @@ img[role="button"]:focus {
   font-family: 'Barlow Condensed', sans-serif;
   font-size: 30px;
   font-weight: 800;
-   text-transform: uppercase;
-    line-height: 1.05;
+  text-transform: uppercase;
+  line-height: 1.05;
   color: #0d0d0d;
   width: 100%;
   max-width: none;
@@ -10271,11 +10270,13 @@ img[role="button"]:focus {
   line-height: 1.45;
   padding-bottom: 0;
   margin: 0.15em 0 0;
+  font-family: 'Barlow Condensed', sans-serif;
 }
 
 .section-title-s4 h2 span {
-  font-weight: 500;
-  display: inline;
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 1.05;
 }
 
 .home-page h2,
@@ -10441,4 +10442,240 @@ img[role="button"]:focus {
 #field-supervision,
 #history {
   scroll-margin-top: 90px;
+}
+
+/* ===== Footer Certifications Strip ===== */
+.footer-certifications {
+  padding: 28px 0 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-certifications__label {
+  margin: 0 0 18px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.cert-grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 36px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cert-grid__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cert-logo {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+
+  /* Monochrome / muted brand tone treatment */
+  filter: grayscale(100%) brightness(0) invert(1) opacity(0.55);
+  transition: opacity 0.25s ease, transform 0.25s ease, filter 0.25s ease;
+  will-change: opacity, transform;
+}
+
+/* Soft hover effect: subtle scale + opacity lift, no color jump */
+.cert-grid__item:hover .cert-logo,
+.cert-grid__item:focus-within .cert-logo {
+  opacity: 1;
+  transform: scale(1.06);
+  filter: grayscale(100%) brightness(0) invert(1) opacity(0.9);
+}
+
+.footer-certifications__note {
+  margin: 18px 0 0;
+  text-align: center;
+  font-size: 11px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+/* Inline-SVG variant support */
+.cert-logo svg {
+  width: 100%;
+  height: 100%;
+  fill: currentColor;
+  color: rgba(255, 255, 255, 0.55);
+  transition: color 0.25s ease, transform 0.25s ease;
+}
+.cert-grid__item:hover .cert-logo svg,
+.cert-grid__item:focus-within .cert-logo svg {
+  color: rgba(255, 255, 255, 0.9);
+  transform: scale(1.06);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 991px) {
+  .cert-grid {
+    gap: 28px;
+  }
+  .cert-logo {
+    width: 42px;
+    height: 42px;
+  }
+}
+
+@media (max-width: 575px) {
+  .footer-certifications {
+    padding: 22px 0 18px;
+  }
+  .cert-grid {
+    gap: 22px 28px;
+  }
+  .cert-logo {
+    width: 38px;
+    height: 38px;
+  }
+  .footer-certifications__note {
+    padding: 0 12px;
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .cert-logo {
+    transition: none;
+  }
+}
+
+/* ===== Partners Marquee ===== */
+.partners-marquee {
+  --marquee-duration: 42s; 
+  --marquee-gap: 64px;
+  --logo-height: 90px;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+
+  /* Edge fade so logos don't hard-clip at the container boundary */
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0,
+    #000 64px,
+    #000 calc(100% - 64px),
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0,
+    #000 64px,
+    #000 calc(100% - 64px),
+    transparent 100%
+  );
+}
+
+.partners-marquee__track {
+  display: flex;
+  width: max-content;
+  animation: partners-marquee-scroll var(--marquee-duration) linear infinite;
+  transform: translate3d(0, 0, 0);
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+/* Each group is one full copy of the logo set */
+.partners-marquee__group {
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto;
+  gap: var(--marquee-gap);
+  margin: 0;
+  padding: 0 calc(var(--marquee-gap) / 2);
+  list-style: none;
+}
+
+.partners-marquee .grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  height: var(--logo-height);
+}
+
+.partners-marquee .grid img {
+  height: 100%;
+  width: auto;
+  max-width: none;
+  object-fit: contain;
+
+  /* Premium muted look, consistent with cert strip */
+  filter: grayscale(100%) opacity(0.6);
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.partners-marquee .grid:hover img {
+  filter: grayscale(0%) opacity(1);
+  transform: scale(1.04);
+}
+
+/* The actual loop: shift exactly one group-width (i.e. -50% of the
+   two-group track) — since both groups are identical, the reset is invisible */
+@keyframes partners-marquee-scroll {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+/* Pause only on hover/focus, never stop automatically */
+.partners-marquee:hover .partners-marquee__track,
+.partners-marquee:focus-within .partners-marquee__track {
+  animation-play-state: paused;
+}
+
+/* Respect users who don't want motion */
+@media (prefers-reduced-motion: reduce) {
+  .partners-marquee__track {
+    animation: none;
+  }
+  .partners-marquee {
+    overflow-x: auto;
+  }
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 991px) {
+  .partners-marquee {
+    --marquee-gap: 48px;
+    --logo-height: 32px;
+    --marquee-duration: 36s;
+  }
+}
+
+@media (max-width: 575px) {
+  .partners-marquee {
+    --marquee-gap: 32px;
+    --logo-height: 26px;
+    --marquee-duration: 30s;
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent 0,
+      #000 32px,
+      #000 calc(100% - 32px),
+      transparent 100%
+    );
+    mask-image: linear-gradient(
+      to right,
+      transparent 0,
+      #000 32px,
+      #000 calc(100% - 32px),
+      transparent 100%
+    );
+  }
 }
